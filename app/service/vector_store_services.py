@@ -49,6 +49,7 @@ class VectorStoreService:
             payload = {
                 "text": chunk.text,
                 "document_id": document_id,
+                "chunk_id": point_id,
                 **chunk.metadata
             }
 
@@ -100,12 +101,12 @@ class VectorStoreService:
                 ]
             )
 
-        results = self.client.search(
+        results = self.client.query_points(
             collection_name=self.collection_name,
-            query_vector=query_embedding,
+            query=query_embedding.detach().cpu().tolist(),
             limit=limit,
-            query_filter=qdrant_filter
-        )
+            query_filter=qdrant_filter,
+        ).points
 
         return results
 

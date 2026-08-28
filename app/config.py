@@ -17,5 +17,8 @@ class Settings:
 
     GROQ_API_KEY=os.getenv("GROQ_API_KEY")
     GROQ_MODEL=os.getenv("GROQ_MODEL")
+    OLLAMA_PORT=os.getenv("OLLAMA_PORT")
+    OLLAMA_HOST=os.getenv("OLLAMA_HOST")
+    OLLAMA_MODEL=os.getenv("OLLAMA_MODEL")
 
 settings = Settings()

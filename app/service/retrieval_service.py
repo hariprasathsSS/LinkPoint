@@ -42,7 +42,7 @@ class RetrievalService:
 
         return merged
 
-    def ask(self, request):
+    async def ask(self, request):
 
         # Step 1: Query Embedding
         query_embedding = self.embedding_service.embedding_model.encode(
@@ -82,6 +82,7 @@ class RetrievalService:
         )
 
         # Step 4: LLM Call
+        # answer = await self.llm_service.generate_local(prompt)
         answer = self.llm_service.generate(prompt)
 
         return {

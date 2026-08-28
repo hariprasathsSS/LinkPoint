@@ -1,6 +1,6 @@
 from groq import Groq
 from app.config import Settings
-
+import httpx
 
 class LLMService:
 
@@ -23,3 +23,28 @@ class LLMService:
         )
 
         return response.choices[0].message.content
+
+
+    async def generate_local(self, prompt: str):
+
+        BASE_URL = f"http://{Settings.OLLAMA_HOST}:{Settings.OLLAMA_PORT}/api/generate"
+        model = Settings.OLLAMA_MODEL
+        payload = {
+            "model":model,
+            "prompt":prompt,
+            "stream":False
+        }
+        try:
+            async with httpx.AsyncClient() as client:
+                response = await client.post(BASE_URL, json=payload)
+
+                if response.status_code == 200:
+                    data = response.json()
+                    return data.get("response")
+                else:
+                    return f"Error: {response.status_code} - {response.text}"
+
+        except httpx.ConnectError:
+            return "Connection Error: Is Ollama running? (Run 'ollama serve')"
+        except Exception as e:
+            return f"Unexpected error: {str(e)}"
