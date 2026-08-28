@@ -1,0 +1,13 @@
+.env
+.venv
+uploads
+qdrant_storage
+*.pkl
+*.txt
+!app/requirements.txt
+*.pyc
+universal_parser
+.vscode
+.agents/
+.claude/
+app/logs/

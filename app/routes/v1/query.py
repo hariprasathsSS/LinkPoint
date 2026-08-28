@@ -7,8 +7,8 @@ qrouter = APIRouter()
 
 
 @qrouter.post("/query", response_model=QueryResponse)
-def query(
+async def query(
     request: QueryRequest,
     service = Depends(get_query_service)
 ):
-    return service.ask(request)
+    return await service.ask(request)

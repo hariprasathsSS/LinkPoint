@@ -4,6 +4,8 @@ import httpx
 
 class LLMService:
 
+    GENERATION_PARAMS = {"temperature": 0.2}
+
     def __init__(self):
         self.client = Groq(
             api_key=Settings.GROQ_API_KEY
@@ -19,7 +21,7 @@ class LLMService:
                     "content": prompt
                 }
             ],
-            temperature=0.2
+            **self.GENERATION_PARAMS
         )
 
         return response.choices[0].message.content

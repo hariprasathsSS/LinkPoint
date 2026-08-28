@@ -1,5 +1,9 @@
 # app/service/retrieval_service.py
 
+from app.config import Settings
+from app.utils.trace_logger import log_trace
+
+
 class RetrievalService:
 
     def __init__(
@@ -27,6 +31,7 @@ class RetrievalService:
                 "payload": r.payload
             }
             for r in results
+            if r.payload.get("text")  # ponytail: skip points from partial/failed ingests; delete stale ones if this fires often
         ]
     def _merge_results(self, global_results, cluster_results):
 
@@ -62,19 +67,13 @@ class RetrievalService:
             filter={"cluster_id": cluster_id}
         )
         combined_results = self._merge_results(global_results, cluster_results)
-
-        print(combined_results[0])
-        print("=============================\n")
         normalized_results = self._normalize_results(combined_results)
-        print(normalized_results[0])
-        print("=============================\n")
         reranked_results = self.reranker_service.rerank(
             query=request.query,
             results=normalized_results,
             top_k=request.top_k
         )
-        print(reranked_results[0])
-        print("=============================\n")
+
         # Step 3: Build Prompt
         prompt = self.prompt_service.build(
             query=request.query,
@@ -82,18 +81,33 @@ class RetrievalService:
         )
 
         # Step 4: LLM Call
-        # answer = await self.llm_service.generate_local(prompt)
         answer = self.llm_service.generate(prompt)
 
+        sources = [
+            {
+                "text": r["result"]["payload"]["text"],
+                "score": r["score"],
+                "page": r["result"]["payload"].get("page"),
+                "chunk_id": r["result"]["payload"].get("chunk_id"),
+            }
+            for r in reranked_results
+        ]
+
+        trace_id = log_trace(
+            question=request.query,
+            retrieved=[
+                {"chunk_id": s["chunk_id"], "score": s["score"], "rank": i + 1}
+                for i, s in enumerate(sources)
+            ],
+            model=Settings.GROQ_MODEL,
+            generation_params=self.llm_service.GENERATION_PARAMS,
+            prompt_version=self.prompt_service.PROMPT_VERSION,
+            answer=answer,
+        )
+
         return {
+            "trace_id": trace_id,
             "query": request.query,
             "answer": answer,
-            "sources": [
-                {
-                    "text": r["result"]["payload"]["text"],
-                    "score": r["score"],
-                    "page": r["result"]["payload"].get("page")
-                }
-                for r in reranked_results
-            ]
+            "sources": sources,
         }

@@ -9,7 +9,8 @@ class ClusteringService:
         self.model = None
 
     def train(self, embeddings):
-        self.model = KMeans(n_clusters=self.n_clusters, random_state=42)
+        n_clusters = min(self.n_clusters, len(embeddings))  # ponytail: KMeans needs n_samples >= n_clusters; small docs would otherwise crash
+        self.model = KMeans(n_clusters=n_clusters, random_state=42)
         self.model.fit(embeddings)
 
         # Save model

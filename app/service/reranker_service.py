@@ -16,7 +16,7 @@ class RerankerService:
         reranked = []
         for score,result in zip(scores,results):
             reranked.append({
-                "score":score,
+                "score":float(score),
                 "result":result
             })
         reranked.sort(key=lambda x:x['score'],reverse=True)

@@ -2,6 +2,8 @@
 
 class PromptService:
 
+    PROMPT_VERSION = "v1"
+
     def build(self, query, results):
 
         context = "\n".join(r["result"]["text"] for r in results)
