@@ -1,16 +1,16 @@
 # eval/run_queries.py
 #
-# Fires a batch of real adjuster-style questions at the real RetrievalService
-# (same code path as the live /query endpoint) against the insurance_claims_eval
-# collection, so app/logs/query.log accumulates genuine traces (successes AND
-# failures) to sample from for the Week 5 error-analysis exercise.
+# Fires a batch of real adjuster-style questions at the real /query endpoint
+# (http://127.0.0.1:8000/query), so app/logs/query.log accumulates genuine
+# traces (successes AND failures) to sample from for the Week 5 error-analysis.
 #
-# Run: python eval/run_queries.py
+# Prereqs: FastAPI server must be running (uvicorn app.main:app --reload)
+# Run:     python eval/run_queries.py
 
-import asyncio
+import httpx
 
-from app.dependencies import get_query_service
-from app.model.query_model import QueryRequest
+BASE_URL = "http://127.0.0.1:8000"
+TOP_K = 3
 
 QUESTIONS = [
     # --- exact-token / trap questions (edition confusion, decoys) ---
@@ -59,19 +59,28 @@ QUESTIONS = [
 ]
 
 
-async def main() -> None:
-    service = get_query_service()
-    service.vector_store_service.collection_name = "insurance_claims_eval"
+def main() -> None:
+    print(f"Firing {len(QUESTIONS)} questions at {BASE_URL}/query ...\n")
 
-    for i, question in enumerate(QUESTIONS, start=1):
-        try:
-            result = await service.ask(QueryRequest(query=question, top_k=3))
-            print(f"[{i}/{len(QUESTIONS)}] trace_id={result['trace_id']} - {question}")
-        except Exception as e:
-            print(f"[{i}/{len(QUESTIONS)}] FAILED ({type(e).__name__}: {e}) - {question}")
+    with httpx.Client(timeout=60.0) as client:
+        for i, question in enumerate(QUESTIONS, start=1):
+            try:
+                response = client.post(
+                    f"{BASE_URL}/query",
+                    json={"query": question, "top_k": TOP_K}
+                )
+                data = response.json()
+                trace_id = data.get("trace_id", "no-trace-id")
+                print(f"[{i}/{len(QUESTIONS)}] trace_id={trace_id}")
+                print(f"  Q: {question[:80]}")
+                print(f"  A: {data.get('answer', '')[:120]}\n")
+
+            except Exception as e:
+                print(f"[{i}/{len(QUESTIONS)}] FAILED ({type(e).__name__}: {e})")
+                print(f"  Q: {question[:80]}\n")
 
     print(f"\nDone. {len(QUESTIONS)} questions sent. See app/logs/query.log for traces.")
 
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    main()

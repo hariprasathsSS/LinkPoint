@@ -5,7 +5,7 @@ from app.service.chunking_service import ChunkingService
 from app.service.embedding_service import EmbeddingService
 from app.service.vector_store_services import VectorStoreService
 from app.service.clustering_service import ClusteringService
-from app.service.parsing_service import PDFParserService
+
 from app.model.chunk_model import ChunkModel
 import uuid
 

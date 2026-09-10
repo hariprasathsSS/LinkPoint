@@ -1,0 +1,572 @@
+[
+  {
+    "trace_id": "5738ff25-bd9f-409f-949b-3e882fea1004",
+    "timestamp": "2026-09-10T19:59:47.174217+00:00",
+    "question": "Is a claim for water damage automatically covered, or does exclusion E-17 need to be checked first?",
+    "prompt_version": "v1",
+    "retrieved": [
+      {
+        "chunk_id": "43291e54-eac2-49a5-b528-6f93240c461e_4",
+        "score": 0.3914690911769867,
+        "rank": 1
+      },
+      {
+        "chunk_id": "c870371d-ae06-4da5-819e-25c37196230b_4",
+        "score": 0.3222731351852417,
+        "rank": 2
+      },
+      {
+        "chunk_id": "48e9bc2e-171b-490a-9d0c-1ac79489bf4a_0",
+        "score": 0.23685702681541443,
+        "rank": 3
+      }
+    ],
+    "model": "openai/gpt-oss-20b",
+    "generation_params": {
+      "temperature": 0.2
+    },
+    "answer": "**Answer:**\n\nA water‑damage claim is **not automatically covered**.  \nThe policy lists Exclusion E‑17 (“Water Damage, Continuous or Repeated Seepage”) as a covered loss that is excluded unless the exclusion is altered by an endorsement. Therefore, before deciding coverage you must:\n\n1. **Check whether Exclusion E‑17 is still in force** on the policy.\n2. **Verify if the endorsement HO‑2306 (Amendment of Water Damage Exclusion) has been applied** and, if so, what changes it makes to the exclusion.\n\nOnly after confirming that the exclusion has been removed or modified by the endorsement can a water‑damage claim be considered covered."
+  },
+  {
+    "trace_id": "fbf1732f-05c5-40ea-ab6d-ea206ab1d2cd",
+    "timestamp": "2026-09-10T19:55:31.657056+00:00",
+    "question": "Does exclusion E-17 apply under form HO-0304 edition 03-24 if a pipe seeps for three weeks?",
+    "prompt_version": "v1",
+    "retrieved": [
+      {
+        "chunk_id": "43291e54-eac2-49a5-b528-6f93240c461e_4",
+        "score": 0.8976292014122009,
+        "rank": 1
+      },
+      {
+        "chunk_id": "48e9bc2e-171b-490a-9d0c-1ac79489bf4a_0",
+        "score": 0.6926833987236023,
+        "rank": 2
+      },
+      {
+        "chunk_id": "43291e54-eac2-49a5-b528-6f93240c461e_0",
+        "score": 0.059911686927080154,
+        "rank": 3
+      },
+      {
+        "chunk_id": "43291e54-eac2-49a5-b528-6f93240c461e_5",
+        "score": 0.05048968270421028,
+        "rank": 4
+      },
+      {
+        "chunk_id": "c870371d-ae06-4da5-819e-25c37196230b_4",
+        "score": 0.04893765598535538,
+        "rank": 5
+      }
+    ],
+    "model": "openai/gpt-oss-20b",
+    "generation_params": {
+      "temperature": 0.2
+    },
+    "answer": "Yes.  \nIn Form HO‑0304 (Edition 03‑24) Exclusion E‑17 states that “Water Damage, Continuous Seepage – Water/steam seeping **14 + days**, including resulting mold or rot” is excluded. A pipe that seeps for three weeks (21 days) exceeds the 14‑day threshold, so the exclusion would apply under the base policy. (Any change to this threshold would be specified in the endorsement HO‑2306, which is not detailed in the provided context.)"
+  },
+  {
+    "trace_id": "a82d6b1f-2f49-437c-85b6-50f539617c9f",
+    "timestamp": "2026-09-10T20:02:34.971800+00:00",
+    "question": "How is a covered dwelling loss settled - replacement cost or actual cash value?",
+    "prompt_version": "v1",
+    "retrieved": [
+      {
+        "chunk_id": "c870371d-ae06-4da5-819e-25c37196230b_6",
+        "score": 0.9777764081954956,
+        "rank": 1
+      },
+      {
+        "chunk_id": "43291e54-eac2-49a5-b528-6f93240c461e_6",
+        "score": 0.9777764081954956,
+        "rank": 2
+      },
+      {
+        "chunk_id": "43291e54-eac2-49a5-b528-6f93240c461e_1",
+        "score": 0.02152118645608425,
+        "rank": 3
+      }
+    ],
+    "model": "openai/gpt-oss-20b",
+    "generation_params": {
+      "temperature": 0.2
+    },
+    "answer": "Covered losses to the dwelling are settled at replacement cost, provided the Coverage A limit is at least 80 % of full replacement cost."
+  },
+  {
+    "trace_id": "945623fc-38b8-40b7-b47d-368bbcc7a317",
+    "timestamp": "2026-09-10T19:59:57.349704+00:00",
+    "question": "Does exclusion E-17 apply if the leak was discovered after 12 days?",
+    "prompt_version": "v1",
+    "retrieved": [
+      {
+        "chunk_id": "48e9bc2e-171b-490a-9d0c-1ac79489bf4a_0",
+        "score": 0.1806964874267578,
+        "rank": 1
+      },
+      {
+        "chunk_id": "43291e54-eac2-49a5-b528-6f93240c461e_4",
+        "score": 0.10388293862342834,
+        "rank": 2
+      },
+      {
+        "chunk_id": "c870371d-ae06-4da5-819e-25c37196230b_4",
+        "score": 0.07338760048151016,
+        "rank": 3
+      }
+    ],
+    "model": "openai/gpt-oss-20b",
+    "generation_params": {
+      "temperature": 0.2
+    },
+    "answer": "I’m sorry, but I don’t have that information."
+  },
+  {
+    "trace_id": "58dd2eda-3f37-4a12-8efe-cc1c98401a11",
+    "timestamp": "2026-09-10T20:03:59.975541+00:00",
+    "question": "Is there a discount for bundling home and auto insurance?",
+    "prompt_version": "v1",
+    "retrieved": [
+      {
+        "chunk_id": "48e9bc2e-171b-490a-9d0c-1ac79489bf4a_1",
+        "score": 0.013280765153467655,
+        "rank": 1
+      },
+      {
+        "chunk_id": "c870371d-ae06-4da5-819e-25c37196230b_1",
+        "score": 0.001389085315167904,
+        "rank": 2
+      },
+      {
+        "chunk_id": "43291e54-eac2-49a5-b528-6f93240c461e_1",
+        "score": 0.001389085315167904,
+        "rank": 3
+      }
+    ],
+    "model": "openai/gpt-oss-20b",
+    "generation_params": {
+      "temperature": 0.2
+    },
+    "answer": "I’m sorry, but I don’t have that information."
+  },
+  {
+    "trace_id": "c6ea6f1b-87d3-46f2-8bb7-da994a3262b3",
+    "timestamp": "2026-09-10T20:03:17.292620+00:00",
+    "question": "Is mold damage covered if it results from a covered water loss?",
+    "prompt_version": "v1",
+    "retrieved": [
+      {
+        "chunk_id": "43291e54-eac2-49a5-b528-6f93240c461e_4",
+        "score": 0.21447762846946716,
+        "rank": 1
+      },
+      {
+        "chunk_id": "c870371d-ae06-4da5-819e-25c37196230b_4",
+        "score": 0.21371155977249146,
+        "rank": 2
+      },
+      {
+        "chunk_id": "c870371d-ae06-4da5-819e-25c37196230b_3",
+        "score": 0.011062500067055225,
+        "rank": 3
+      }
+    ],
+    "model": "openai/gpt-oss-20b",
+    "generation_params": {
+      "temperature": 0.2
+    },
+    "answer": "Yes – mold damage is covered **only** when it stems from a *covered* water loss that is sudden and accidental (e.g., a sudden discharge or overflow of water or steam from a plumbing, heating, or air‑conditioning system, or a household appliance).  \n\nMold that develops from **continuous seepage** (water or steam seeping for 10 + days) is specifically excluded under E‑17."
+  },
+  {
+    "trace_id": "5621dcbd-24ff-49bf-a6eb-4e1ce68f9747",
+    "timestamp": "2026-09-10T19:59:14.895657+00:00",
+    "question": "If the dwelling was vacant for 90 days and there's a 20-day seepage loss, does endorsement HO-2306 cover it?",
+    "prompt_version": "v1",
+    "retrieved": [
+      {
+        "chunk_id": "48e9bc2e-171b-490a-9d0c-1ac79489bf4a_0",
+        "score": 0.7742523550987244,
+        "rank": 1
+      },
+      {
+        "chunk_id": "48e9bc2e-171b-490a-9d0c-1ac79489bf4a_1",
+        "score": 0.1420091986656189,
+        "rank": 2
+      },
+      {
+        "chunk_id": "43291e54-eac2-49a5-b528-6f93240c461e_4",
+        "score": 0.048751041293144226,
+        "rank": 3
+      }
+    ],
+    "model": "openai/gpt-oss-20b",
+    "generation_params": {
+      "temperature": 0.2
+    },
+    "answer": "No.  \nThe endorsement specifically limits coverage to seepage or leakage lasting fewer than 30 days **only if the dwelling was not vacant or unoccupied for more than 60 consecutive days** during the policy period. Since the dwelling was vacant for 90 days, it exceeds that 60‑day threshold, so the 20‑day seepage loss would not be covered under HO‑2306."
+  },
+  {
+    "trace_id": "1a7a3677-0872-476b-943c-b061475bac0d",
+    "timestamp": "2026-09-10T20:03:38.821501+00:00",
+    "question": "Does this policy cover auto accidents?",
+    "prompt_version": "v1",
+    "retrieved": [
+      {
+        "chunk_id": "48e9bc2e-171b-490a-9d0c-1ac79489bf4a_1",
+        "score": 0.04319555312395096,
+        "rank": 1
+      },
+      {
+        "chunk_id": "c870371d-ae06-4da5-819e-25c37196230b_3",
+        "score": 0.021265339106321335,
+        "rank": 2
+      },
+      {
+        "chunk_id": "43291e54-eac2-49a5-b528-6f93240c461e_3",
+        "score": 0.021265339106321335,
+        "rank": 3
+      }
+    ],
+    "model": "openai/gpt-oss-20b",
+    "generation_params": {
+      "temperature": 0.2
+    },
+    "answer": "I’m sorry, but I don’t have that information."
+  },
+  {
+    "trace_id": "5af77787-8683-4d16-99b6-c87327670c9d",
+    "timestamp": "2026-09-10T19:59:03.745230+00:00",
+    "question": "Does endorsement HO-2306 change how exclusion E-17 applies?",
+    "prompt_version": "v1",
+    "retrieved": [
+      {
+        "chunk_id": "48e9bc2e-171b-490a-9d0c-1ac79489bf4a_0",
+        "score": 0.9653556942939758,
+        "rank": 1
+      },
+      {
+        "chunk_id": "43291e54-eac2-49a5-b528-6f93240c461e_4",
+        "score": 0.09432915598154068,
+        "rank": 2
+      },
+      {
+        "chunk_id": "c870371d-ae06-4da5-819e-25c37196230b_4",
+        "score": 0.06236875802278519,
+        "rank": 3
+      }
+    ],
+    "model": "openai/gpt-oss-20b",
+    "generation_params": {
+      "temperature": 0.2
+    },
+    "answer": "Yes – endorsement HO‑2306 amends Exclusion E‑17 (Water Damage, Continuous or Repeated Seepage) of Form HO‑0304, so it changes how that exclusion applies."
+  },
+  {
+    "trace_id": "ac24fbf7-8823-481e-8a65-5789299f1aa5",
+    "timestamp": "2026-09-10T20:02:13.422242+00:00",
+    "question": "What are the claimant's duties after a loss?",
+    "prompt_version": "v1",
+    "retrieved": [
+      {
+        "chunk_id": "c870371d-ae06-4da5-819e-25c37196230b_6",
+        "score": 0.9935168027877808,
+        "rank": 1
+      },
+      {
+        "chunk_id": "43291e54-eac2-49a5-b528-6f93240c461e_6",
+        "score": 0.9935168027877808,
+        "rank": 2
+      },
+      {
+        "chunk_id": "c870371d-ae06-4da5-819e-25c37196230b_1",
+        "score": 0.0059828986413776875,
+        "rank": 3
+      }
+    ],
+    "model": "openai/gpt-oss-20b",
+    "generation_params": {
+      "temperature": 0.2
+    },
+    "answer": "The claimant must:  \n1. **Give prompt notice** of the loss.  \n2. **Protect the property** from further damage.  \n3. **Cooperate** with the insurer in the investigation of the claim."
+  },
+  {
+    "trace_id": "ad0d92e2-f0c8-4ba3-94a6-de2ba2fb025e",
+    "timestamp": "2026-09-10T20:01:30.892744+00:00",
+    "question": "How much personal property coverage does this policy provide?",
+    "prompt_version": "v1",
+    "retrieved": [
+      {
+        "chunk_id": "c870371d-ae06-4da5-819e-25c37196230b_2",
+        "score": 0.18501430749893188,
+        "rank": 1
+      },
+      {
+        "chunk_id": "43291e54-eac2-49a5-b528-6f93240c461e_2",
+        "score": 0.18501430749893188,
+        "rank": 2
+      },
+      {
+        "chunk_id": "43291e54-eac2-49a5-b528-6f93240c461e_1",
+        "score": 0.050600677728652954,
+        "rank": 3
+      }
+    ],
+    "model": "openai/gpt-oss-20b",
+    "generation_params": {
+      "temperature": 0.2
+    },
+    "answer": "The policy provides **$175,000** in coverage for personal property."
+  },
+  {
+    "trace_id": "13062e6f-1dc5-432b-aebd-fbdfdfc91968",
+    "timestamp": "2026-09-10T19:58:52.813708+00:00",
+    "question": "Is water damage covered if it's a sudden pipe burst, not a slow leak?",
+    "prompt_version": "v1",
+    "retrieved": [
+      {
+        "chunk_id": "43291e54-eac2-49a5-b528-6f93240c461e_3",
+        "score": 0.16930873692035675,
+        "rank": 1
+      },
+      {
+        "chunk_id": "c870371d-ae06-4da5-819e-25c37196230b_3",
+        "score": 0.16930873692035675,
+        "rank": 2
+      },
+      {
+        "chunk_id": "43291e54-eac2-49a5-b528-6f93240c461e_4",
+        "score": 0.014960451051592827,
+        "rank": 3
+      }
+    ],
+    "model": "openai/gpt-oss-20b",
+    "generation_params": {
+      "temperature": 0.2
+    },
+    "answer": "Yes.  \nThe policy’s Coverage C specifically lists “Sudden and Accidental Discharge or Overflow of Water” as a covered peril. A pipe burst that causes an immediate, accidental overflow of water falls under this category, so the resulting direct physical damage would be covered. (Only slow, continuous seepage lasting 14 + days would be excluded.)"
+  },
+  {
+    "trace_id": "9f2bd7ee-68d8-4e01-8695-85e9eb0c95f3",
+    "timestamp": "2026-09-10T20:01:41.454651+00:00",
+    "question": "What's the limit for other structures like a detached garage?",
+    "prompt_version": "v1",
+    "retrieved": [
+      {
+        "chunk_id": "c870371d-ae06-4da5-819e-25c37196230b_2",
+        "score": 0.4876045286655426,
+        "rank": 1
+      },
+      {
+        "chunk_id": "43291e54-eac2-49a5-b528-6f93240c461e_2",
+        "score": 0.4876045286655426,
+        "rank": 2
+      },
+      {
+        "chunk_id": "c870371d-ae06-4da5-819e-25c37196230b_1",
+        "score": 0.13222725689411163,
+        "rank": 3
+      }
+    ],
+    "model": "openai/gpt-oss-20b",
+    "generation_params": {
+      "temperature": 0.2
+    },
+    "answer": "The limit for other structures, such as a detached garage, is **$35,000**."
+  },
+  {
+    "trace_id": "af546424-77af-459a-ac65-86b9d59e1d25",
+    "timestamp": "2026-09-10T20:00:50.162949+00:00",
+    "question": "Is damage from a nuclear incident covered?",
+    "prompt_version": "v1",
+    "retrieved": [
+      {
+        "chunk_id": "48e9bc2e-171b-490a-9d0c-1ac79489bf4a_1",
+        "score": 0.006429013330489397,
+        "rank": 1
+      },
+      {
+        "chunk_id": "43291e54-eac2-49a5-b528-6f93240c461e_5",
+        "score": 0.0052513256669044495,
+        "rank": 2
+      },
+      {
+        "chunk_id": "c870371d-ae06-4da5-819e-25c37196230b_5",
+        "score": 0.004389778710901737,
+        "rank": 3
+      }
+    ],
+    "model": "openai/gpt-oss-20b",
+    "generation_params": {
+      "temperature": 0.2
+    },
+    "answer": "No. The policy does not cover damage caused by a nuclear incident."
+  },
+  {
+    "trace_id": "7b60126d-f4d8-4cd2-b51c-580b3520c1ee",
+    "timestamp": "2026-09-10T19:58:30.907791+00:00",
+    "question": "Does exclusion E-17 apply under form HO-0304 edition 03-24 if a pipe seeps for three weeks?",
+    "prompt_version": "v1",
+    "retrieved": [
+      {
+        "chunk_id": "43291e54-eac2-49a5-b528-6f93240c461e_4",
+        "score": 0.8976292014122009,
+        "rank": 1
+      },
+      {
+        "chunk_id": "48e9bc2e-171b-490a-9d0c-1ac79489bf4a_0",
+        "score": 0.6926833987236023,
+        "rank": 2
+      },
+      {
+        "chunk_id": "43291e54-eac2-49a5-b528-6f93240c461e_0",
+        "score": 0.059911686927080154,
+        "rank": 3
+      }
+    ],
+    "model": "openai/gpt-oss-20b",
+    "generation_params": {
+      "temperature": 0.2
+    },
+    "answer": "Yes.  \nUnder Form HO‑0304, Edition 03‑24, Exclusion E‑17 covers “Water Damage, Continuous Seepage” when water or steam has been seeping for **14 days or more** (including resulting mold or rot). A pipe that has been seeping for three weeks (21 days) meets that threshold, so the exclusion would apply unless the endorsement HO‑2306 specifically removes or modifies it. In the absence of any stated change in the endorsement text, the exclusion remains in effect."
+  },
+  {
+    "trace_id": "643d69c9-dc37-45a0-979c-2cdd462e2ca8",
+    "timestamp": "2026-09-10T20:03:49.289105+00:00",
+    "question": "What's the claims phone number for Harborstone Mutual?",
+    "prompt_version": "v1",
+    "retrieved": [
+      {
+        "chunk_id": "43291e54-eac2-49a5-b528-6f93240c461e_4",
+        "score": 0.016124464571475983,
+        "rank": 1
+      },
+      {
+        "chunk_id": "c870371d-ae06-4da5-819e-25c37196230b_4",
+        "score": 0.01451841089874506,
+        "rank": 2
+      },
+      {
+        "chunk_id": "48e9bc2e-171b-490a-9d0c-1ac79489bf4a_0",
+        "score": 0.006954199634492397,
+        "rank": 3
+      }
+    ],
+    "model": "openai/gpt-oss-20b",
+    "generation_params": {
+      "temperature": 0.2
+    },
+    "answer": "I’m sorry, but I don’t have that information."
+  },
+  {
+    "trace_id": "a75fcc56-71fd-4a10-ab29-d462234f0949",
+    "timestamp": "2026-09-10T20:02:02.424291+00:00",
+    "question": "What is the total dwelling coverage limit?",
+    "prompt_version": "v1",
+    "retrieved": [
+      {
+        "chunk_id": "c870371d-ae06-4da5-819e-25c37196230b_2",
+        "score": 0.9720829129219055,
+        "rank": 1
+      },
+      {
+        "chunk_id": "43291e54-eac2-49a5-b528-6f93240c461e_2",
+        "score": 0.9720829129219055,
+        "rank": 2
+      },
+      {
+        "chunk_id": "c870371d-ae06-4da5-819e-25c37196230b_6",
+        "score": 0.37960532307624817,
+        "rank": 3
+      }
+    ],
+    "model": "openai/gpt-oss-20b",
+    "generation_params": {
+      "temperature": 0.2
+    },
+    "answer": "$350,000"
+  },
+  {
+    "trace_id": "395c5537-289b-46ae-a102-827b54152e46",
+    "timestamp": "2026-09-10T20:02:45.145031+00:00",
+    "question": "What percentage of replacement cost must Coverage A be for replacement cost settlement to apply?",
+    "prompt_version": "v1",
+    "retrieved": [
+      {
+        "chunk_id": "c870371d-ae06-4da5-819e-25c37196230b_6",
+        "score": 0.993128776550293,
+        "rank": 1
+      },
+      {
+        "chunk_id": "43291e54-eac2-49a5-b528-6f93240c461e_6",
+        "score": 0.993128776550293,
+        "rank": 2
+      },
+      {
+        "chunk_id": "c870371d-ae06-4da5-819e-25c37196230b_2",
+        "score": 0.00348710548132658,
+        "rank": 3
+      }
+    ],
+    "model": "openai/gpt-oss-20b",
+    "generation_params": {
+      "temperature": 0.2
+    },
+    "answer": "Answer: 80% of the full replacement cost."
+  },
+  {
+    "trace_id": "9a87da24-6108-45bf-b25f-d444b36a0b24",
+    "timestamp": "2026-09-10T20:01:00.423144+00:00",
+    "question": "What does exclusion E-05 cover?",
+    "prompt_version": "v1",
+    "retrieved": [
+      {
+        "chunk_id": "43291e54-eac2-49a5-b528-6f93240c461e_4",
+        "score": 0.6042316555976868,
+        "rank": 1
+      },
+      {
+        "chunk_id": "c870371d-ae06-4da5-819e-25c37196230b_4",
+        "score": 0.5909180641174316,
+        "rank": 2
+      },
+      {
+        "chunk_id": "48e9bc2e-171b-490a-9d0c-1ac79489bf4a_1",
+        "score": 0.0017963382415473461,
+        "rank": 3
+      }
+    ],
+    "model": "openai/gpt-oss-20b",
+    "generation_params": {
+      "temperature": 0.2
+    },
+    "answer": "Exclusion **E‑05** covers loss caused by **earth movement**—specifically earthquakes, landslides, mudflows, or sinkhole collapses."
+  },
+  {
+    "trace_id": "c9fb6519-cc15-4c7c-89c6-fa3652b4c5b4",
+    "timestamp": "2026-09-10T20:03:28.598242+00:00",
+    "question": "Does the policy cover a claim if the adjuster isn't sure which form edition was in effect at loss date?",
+    "prompt_version": "v1",
+    "retrieved": [
+      {
+        "chunk_id": "48e9bc2e-171b-490a-9d0c-1ac79489bf4a_1",
+        "score": 0.0069575924426317215,
+        "rank": 1
+      },
+      {
+        "chunk_id": "43291e54-eac2-49a5-b528-6f93240c461e_4",
+        "score": 0.003403636161237955,
+        "rank": 2
+      },
+      {
+        "chunk_id": "c870371d-ae06-4da5-819e-25c37196230b_4",
+        "score": 0.0027706571854650974,
+        "rank": 3
+      }
+    ],
+    "model": "openai/gpt-oss-20b",
+    "generation_params": {
+      "temperature": 0.2
+    },
+    "answer": "Yes. The policy’s special provision expressly covers seepage or leakage that lasts **fewer than 30 days** (subject to the vacant‑dwelling test). That coverage is in addition to the standard exclusions in Form HO‑0304, and the exclusions themselves are unchanged from the edition that was in effect at the loss date. Therefore, even if the adjuster is unsure which edition was in effect, the claim will be covered as long as the loss meets the 30‑day seepage limit and the dwelling was not vacant for more than 60 consecutive days."
+  }
+]
