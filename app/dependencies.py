@@ -52,6 +52,9 @@ def get_query_service():
         llm_service
     )
 
+def get_vector_store_service():
+    return VectorStoreService()
+
 # # app/dependencies.py
 
 # from app.service.ingestion_service import IngestionService

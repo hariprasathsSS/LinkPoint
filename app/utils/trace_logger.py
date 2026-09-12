@@ -34,7 +34,10 @@ def log_trace(*, question, retrieved, model, generation_params, prompt_version, 
         "timestamp": datetime.now(timezone.utc).isoformat(),
         "question": redact(question),
         "prompt_version": prompt_version,
-        "retrieved": retrieved,
+        "retrieved": [
+            {**chunk, "text": redact(chunk["text"])} if "text" in chunk else chunk
+            for chunk in retrieved
+        ],
         "model": model,
         "generation_params": generation_params,
         "answer": redact(answer),

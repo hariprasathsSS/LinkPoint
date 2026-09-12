@@ -96,7 +96,7 @@ class RetrievalService:
         trace_id = log_trace(
             question=request.query,
             retrieved=[
-                {"chunk_id": s["chunk_id"], "score": s["score"], "rank": i + 1}
+                {"chunk_id": s["chunk_id"], "score": s["score"], "rank": i + 1, "text": s["text"]}
                 for i, s in enumerate(sources)
             ],
             model=Settings.GROQ_MODEL,

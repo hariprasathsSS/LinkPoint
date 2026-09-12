@@ -110,3 +110,15 @@ class VectorStoreService:
 
         return results
 
+    def fetch_by_chunk_id(self, chunk_id: str) -> dict | None:
+        results, _ = self.client.scroll(
+            collection_name=self.collection_name,
+            scroll_filter=Filter(
+                must=[FieldCondition(key="chunk_id", match=MatchValue(value=chunk_id))]
+            ),
+            with_payload=True,
+            limit=1
+        )
+        if not results:
+            return None
+        return results[0].payload
