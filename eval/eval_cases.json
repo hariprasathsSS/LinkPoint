@@ -1,0 +1,222 @@
+﻿[
+  {
+    "case_id": "case_01",
+    "trace_id": "5738ff25-bd9f-409f-949b-3e882fea1004",
+    "question": "Is a claim for water damage automatically covered, or does exclusion E-17 need to be checked first?",
+    "answer": "A water-damage claim is not automatically covered. The policy lists Exclusion E-17 as a covered loss that is excluded unless the exclusion is altered by an endorsement. Therefore, before deciding coverage you must check whether Exclusion E-17 is still in force on the policy and verify if the endorsement HO-2306 has been applied.",
+    "mode": "mode_5_correct",
+    "is_regression": false,
+    "ground_truth": "E-17 must be checked first. If endorsement HO-2306 is attached it amends E-17 to cover seepage under 30 days provided the dwelling was not vacant more than 60 consecutive days."
+  },
+  {
+    "case_id": "case_02",
+    "trace_id": "fbf1732f-05c5-40ea-ab6d-ea206ab1d2cd",
+    "question": "Does exclusion E-17 apply under form HO-0304 edition 03-24 if a pipe seeps for three weeks?",
+    "answer": "Yes. In Form HO-0304 Edition 03-24 Exclusion E-17 states that Water Damage Continuous Seepage lasting 14+ days including resulting mold or rot is excluded. A pipe that seeps for three weeks (21 days) exceeds the 14-day threshold so the exclusion applies.",
+    "mode": "mode_5_correct",
+    "is_regression": false,
+    "ground_truth": "Yes. Edition 03-24 sets the E-17 threshold at 14 days. 21 days exceeds it so E-17 applies."
+  },
+  {
+    "case_id": "case_03",
+    "trace_id": "a82d6b1f-2f49-437c-85b6-50f539617c9f",
+    "question": "How is a covered dwelling loss settled - replacement cost or actual cash value?",
+    "answer": "Covered losses to the dwelling are settled at replacement cost, provided the Coverage A limit is at least 80% of full replacement cost.",
+    "mode": "mode_5_correct",
+    "is_regression": false,
+    "ground_truth": "Replacement cost, provided Coverage A is at least 80% of full replacement cost."
+  },
+  {
+    "case_id": "case_04",
+    "trace_id": "945623fc-38b8-40b7-b47d-368bbcc7a317",
+    "question": "Does exclusion E-17 apply if the leak was discovered after 12 days?",
+    "answer": "I'm sorry, but I don't have that information.",
+    "mode": "mode_1",
+    "is_regression": true,
+    "ground_truth": "No. Edition 03-24 sets the E-17 threshold at 14 days. 12 days is below the threshold so E-17 does NOT apply."
+  },
+  {
+    "case_id": "case_05",
+    "trace_id": "58dd2eda-3f37-4a12-8efe-cc1c98401a11",
+    "question": "Is there a discount for bundling home and auto insurance?",
+    "answer": "I'm sorry, but I don't have that information.",
+    "mode": "mode_4_correct",
+    "is_regression": false,
+    "ground_truth": "Not in corpus. Correct deflection expected."
+  },
+  {
+    "case_id": "case_06",
+    "trace_id": "c6ea6f1b-87d3-46f2-8bb7-da994a3262b3",
+    "question": "Is mold damage covered if it results from a covered water loss?",
+    "answer": "Yes - mold damage is covered only when it stems from a covered water loss that is sudden and accidental. Mold that develops from continuous seepage lasting 10+ days is specifically excluded under E-17.",
+    "mode": "mode_2",
+    "is_regression": false,
+    "ground_truth": "Mold from sudden accidental discharge is covered. Mold from continuous seepage is excluded under E-17. Edition 03-24 threshold is 14 days not 10 days."
+  },
+  {
+    "case_id": "case_07",
+    "trace_id": "5621dcbd-24ff-49bf-a6eb-4e1ce68f9747",
+    "question": "If the dwelling was vacant for 90 days and there is a 20-day seepage loss, does endorsement HO-2306 cover it?",
+    "answer": "No. The endorsement limits coverage to seepage lasting fewer than 30 days only if the dwelling was not vacant for more than 60 consecutive days. Since the dwelling was vacant for 90 days it exceeds that threshold so the loss is not covered under HO-2306.",
+    "mode": "mode_5_correct",
+    "is_regression": false,
+    "ground_truth": "No. HO-2306 requires vacancy under 60 days. 90 days exceeds the limit so coverage does not apply."
+  },
+  {
+    "case_id": "case_08",
+    "trace_id": "1a7a3677-0872-476b-943c-b061475bac0d",
+    "question": "Does this policy cover auto accidents?",
+    "answer": "I'm sorry, but I don't have that information.",
+    "mode": "mode_4_correct",
+    "is_regression": false,
+    "ground_truth": "Not in corpus. Correct deflection expected."
+  },
+  {
+    "case_id": "case_09",
+    "trace_id": "5af77787-8683-4d16-99b6-c87327670c9d",
+    "question": "Does endorsement HO-2306 change how exclusion E-17 applies?",
+    "answer": "Yes - endorsement HO-2306 amends Exclusion E-17 of Form HO-0304 so it changes how that exclusion applies.",
+    "mode": "mode_2",
+    "is_regression": false,
+    "ground_truth": "Yes. HO-2306 changes E-17 in two specific ways: seepage under 30 days is now covered, and only if the dwelling was not vacant more than 60 consecutive days."
+  },
+  {
+    "case_id": "case_10",
+    "trace_id": "ac24fbf7-8823-481e-8a65-5789299f1aa5",
+    "question": "What are the claimant's duties after a loss?",
+    "answer": "The claimant must give prompt notice of the loss, protect the property from further damage, and cooperate with the insurer in the investigation of the claim.",
+    "mode": "mode_5_correct",
+    "is_regression": false,
+    "ground_truth": "Give prompt notice, protect the property from further damage, and cooperate with the insurer."
+  },
+  {
+    "case_id": "case_11",
+    "trace_id": "ad0d92e2-f0c8-4ba3-94a6-de2ba2fb025e",
+    "question": "How much personal property coverage does this policy provide?",
+    "answer": "The policy provides $175,000 in coverage for personal property.",
+    "mode": "mode_5_correct",
+    "is_regression": false,
+    "ground_truth": "Coverage C - Personal Property limit is $175,000."
+  },
+  {
+    "case_id": "case_12",
+    "trace_id": "13062e6f-1dc5-432b-aebd-fbdfdfc91968",
+    "question": "Is water damage covered if it is a sudden pipe burst not a slow leak?",
+    "answer": "Yes. The policy's Coverage C lists Sudden and Accidental Discharge or Overflow of Water as a covered peril. A pipe burst that causes an immediate accidental overflow falls under this category. Only continuous seepage lasting 14+ days would be excluded.",
+    "mode": "mode_5_correct",
+    "is_regression": false,
+    "ground_truth": "Yes. Sudden and Accidental Discharge or Overflow of Water is a named peril under Coverage C. Continuous seepage 14+ days is excluded under E-17 but a sudden burst is not."
+  },
+  {
+    "case_id": "case_13",
+    "trace_id": "9f2bd7ee-68d8-4e01-8695-85e9eb0c95f3",
+    "question": "What is the limit for other structures like a detached garage?",
+    "answer": "The limit for other structures such as a detached garage is $35,000.",
+    "mode": "mode_5_correct",
+    "is_regression": false,
+    "ground_truth": "Coverage B - Other Structures limit is $35,000."
+  },
+  {
+    "case_id": "case_14",
+    "trace_id": "af546424-77af-459a-ac65-86b9d59e1d25",
+    "question": "Is damage from a nuclear incident covered?",
+    "answer": "No. The policy does not cover damage caused by a nuclear incident.",
+    "mode": "mode_5_correct",
+    "is_regression": false,
+    "ground_truth": "No. Exclusion E-20 Nuclear Hazard excludes nuclear reaction radiation or radioactive contamination."
+  },
+  {
+    "case_id": "case_15",
+    "trace_id": "7b60126d-f4d8-4cd2-b51c-580b3520c1ee",
+    "question": "Does exclusion E-17 apply under form HO-0304 edition 03-24 if a pipe seeps for three weeks?",
+    "answer": "Yes. Under Form HO-0304 Edition 03-24 Exclusion E-17 covers Water Damage Continuous Seepage when water or steam has been seeping for 14 days or more. A pipe seeping for three weeks (21 days) meets that threshold so the exclusion applies.",
+    "mode": "mode_5_correct",
+    "is_regression": false,
+    "ground_truth": "Yes. Edition 03-24 sets the E-17 threshold at 14 days. 21 days exceeds it so E-17 applies."
+  },
+  {
+    "case_id": "case_16",
+    "trace_id": "643d69c9-dc37-45a0-979c-2cdd462e2ca8",
+    "question": "What is the claims phone number for Harborstone Mutual?",
+    "answer": "I'm sorry, but I don't have that information.",
+    "mode": "mode_4_correct",
+    "is_regression": false,
+    "ground_truth": "Not in corpus. Correct deflection expected."
+  },
+  {
+    "case_id": "case_17",
+    "trace_id": "a75fcc56-71fd-4a10-ab29-d462234f0949",
+    "question": "What is the total dwelling coverage limit?",
+    "answer": "$350,000",
+    "mode": "mode_5_correct",
+    "is_regression": false,
+    "ground_truth": "Coverage A - Dwelling limit is $350,000."
+  },
+  {
+    "case_id": "case_18",
+    "trace_id": "395c5537-289b-46ae-a102-827b54152e46",
+    "question": "What percentage of replacement cost must Coverage A be for replacement cost settlement to apply?",
+    "answer": "Answer: 80% of the full replacement cost.",
+    "mode": "mode_5_correct",
+    "is_regression": false,
+    "ground_truth": "Coverage A must be at least 80% of full replacement cost for replacement cost settlement to apply."
+  },
+  {
+    "case_id": "case_19",
+    "trace_id": "9a87da24-6108-45bf-b25f-d444b36a0b24",
+    "question": "What does exclusion E-05 cover?",
+    "answer": "Exclusion E-05 covers loss caused by earth movement specifically earthquakes landslides mudflows or sinkhole collapses.",
+    "mode": "mode_5_correct",
+    "is_regression": false,
+    "ground_truth": "E-05 Earth Movement covers earthquake landslide mudflow or sinkhole collapse."
+  },
+  {
+    "case_id": "case_20",
+    "trace_id": "c9fb6519-cc15-4c7c-89c6-fa3652b4c5b4",
+    "question": "Does the policy cover a claim if the adjuster is not sure which form edition was in effect at loss date?",
+    "answer": "Yes. The policy's special provision covers seepage lasting fewer than 30 days subject to the vacant-dwelling test. That coverage is in addition to the standard exclusions in Form HO-0304 and the exclusions are unchanged from the edition in effect at the loss date.",
+    "mode": "mode_3",
+    "is_regression": true,
+    "ground_truth": "The corpus does not address edition-date uncertainty. The correct response is that this information is not available in the provided policy documents."
+  },
+  {
+    "case_id": "case_21",
+    "question": "Under the older edition of form HO-0304 how many days of seepage does exclusion E-17 require before it applies?",
+    "answer": "Under the older 01‑19 edition of Form HO‑0304, exclusion E‑17 applies after **10 days** of continuous seepage.",
+    "mode": "mode_5_correct",
+    "is_regression": false,
+    "ground_truth": "Edition 01-19 sets the E-17 threshold at 10 days of continuous seepage."
+  },
+  {
+    "case_id": "case_22",
+    "question": "Does the sudden and accidental discharge peril cover a slow ongoing leak under a sink?",
+    "answer": "**Answer:**\n\nNo. The “Sudden and Accidental Discharge or Overflow of Water” coverage is limited to *direct physical loss caused by a sudden and accidental discharge or overflow* from a plumbing, heating, or air‑conditioning system, or from a household appliance. A slow, ongoing leak under a sink does **not** meet the definition of a sudden discharge.\n\nHowever, the policy does contain a separate provision that will pay for loss caused by seepage or leakage of water or steam **lasting fewer than 30 days** (subject to the additional premium and the 60‑day vacancy rule). If the leak is truly slow‑moving but remains under 30 days, it may be covered under that seepage clause.  \n\nBut note that the exclusions list “Continuous Seepage” (water/steam seeping 10+ days in the 01‑19 edition, 14+ days in the 03‑24 edition) as a covered loss. Therefore, if the leak continues beyond those thresholds, it is excluded. In short:\n\n- **Sudden discharge peril:** No coverage for a slow leak.  \n- **Seepage provision:** Coverage only if the leak lasts < 30 days and does not exceed the continuous‑seepage exclusion limits.",
+    "mode": "mode_5_correct",
+    "is_regression": false,
+    "ground_truth": "No. Sudden and Accidental Discharge covers immediate overflow not slow ongoing leaks. Slow leaks fall under E-17 continuous seepage exclusion."
+  },
+  {
+    "case_id": "case_23",
+    "question": "What is the Coverage A limit of liability?",
+    "answer": "$350,000",
+    "mode": "mode_5_correct",
+    "is_regression": false,
+    "ground_truth": "Coverage A - Dwelling limit of liability is $350,000."
+  },
+  {
+    "case_id": "case_24",
+    "question": "Does the policy exclude sinkhole collapse?",
+    "answer": "Yes. The policy’s exclusions list (E‑05 Earth Movement) specifically names “sinkhole collapse” as an excluded cause of loss.",
+    "mode": "mode_5_correct",
+    "is_regression": false,
+    "ground_truth": "Yes. Exclusion E-05 Earth Movement explicitly lists sinkhole collapse as an excluded cause of loss."
+  },
+  {
+    "case_id": "case_25",
+    "question": "What is the Coverage D loss of use limit?",
+    "answer": "$70,000",
+    "mode": "mode_5_correct",
+    "is_regression": false,
+    "ground_truth": "Coverage D - Loss of Use limit is $70,000."
+  }
+]
