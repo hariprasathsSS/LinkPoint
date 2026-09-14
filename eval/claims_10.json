@@ -1,0 +1,82 @@
+[
+  {
+    "claim_id": "CLM-2024-001",
+    "status": "OPEN",
+    "claim_amount": 5000,
+    "excess": 500,
+    "initial_description": "Water damage in the kitchen. A pipe burst suddenly and flooded the room.",
+    "adjuster_notes": "Inspected property. Confirmed a sudden and accidental pipe burst. The damage matches the claim. The house is occupied."
+  },
+  {
+    "claim_id": "CLM-2024-002",
+    "status": "OPEN",
+    "claim_amount": 12000,
+    "excess": 1000,
+    "initial_description": "Fire damage to the detached garage.",
+    "adjuster_notes": "Garage burned down due to an electrical fault. Loss is covered. Limit for other structures needs to be checked."
+  },
+  {
+    "claim_id": "CLM-2024-003",
+    "status": "UNDER_INVESTIGATION",
+    "claim_amount": 8000,
+    "excess": 1000,
+    "initial_description": "Water damage to the living room ceiling from a roof leak.",
+    "adjuster_notes": "The leak is NOT from the roof. I found a slow leak in the upstairs bathroom plumbing that has been continuously seeping for 20 days. Wood rot is present."
+  },
+  {
+    "claim_id": "CLM-2024-004",
+    "status": "OPEN",
+    "claim_amount": 3000,
+    "excess": 250,
+    "initial_description": "Theft of personal property (electronics).",
+    "adjuster_notes": "Police report provided. Forced entry confirmed. Stolen items verified."
+  },
+  {
+    "claim_id": "CLM-2024-005",
+    "status": "UNDER_INVESTIGATION",
+    "claim_amount": 15000,
+    "excess": 1500,
+    "initial_description": "Extensive water damage to floors due to continuous seepage. Customer states they have the HO-2306 endorsement.",
+    "adjuster_notes": "Confirmed continuous seepage for 25 days. The policyholder has the HO-2306 endorsement. However, the property has been completely vacant for the last 90 days."
+  },
+  {
+    "claim_id": "CLM-2024-006",
+    "status": "OPEN",
+    "claim_amount": 7500,
+    "excess": 500,
+    "initial_description": "Wind damage to the roof, several shingles blown off.",
+    "adjuster_notes": "Wind damage confirmed from recent storm. No interior water damage."
+  },
+  {
+    "claim_id": "CLM-2024-007",
+    "status": "OPEN",
+    "claim_amount": 4000,
+    "excess": 500,
+    "initial_description": "Cracked foundation and wall damage.",
+    "adjuster_notes": "Damage is due to a sinkhole collapse under the property. Earth movement confirmed."
+  },
+  {
+    "claim_id": "CLM-2024-008",
+    "status": "UNDER_INVESTIGATION",
+    "claim_amount": 9000,
+    "excess": 1000,
+    "initial_description": "Water damage in the basement. Customer claims a pipe burst.",
+    "adjuster_notes": "The damage was NOT caused by a pipe burst. It was caused by surface water flooding from heavy rain outside."
+  },
+  {
+    "claim_id": "CLM-2024-009",
+    "status": "OPEN",
+    "claim_amount": 6000,
+    "excess": 500,
+    "initial_description": "Slow leak under the sink causing cabinet damage. Customer has HO-2306 endorsement.",
+    "adjuster_notes": "Confirmed continuous seepage lasting 15 days. Property is occupied (not vacant). Customer has HO-2306 active."
+  },
+  {
+    "claim_id": "CLM-2024-010",
+    "status": "OPEN",
+    "claim_amount": 2000,
+    "excess": 250,
+    "initial_description": "Lightning struck a tree which fell on the fence.",
+    "adjuster_notes": "Lightning strike confirmed. Fence (other structure) damaged."
+  }
+]
