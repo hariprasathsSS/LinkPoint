@@ -1,6 +1,34 @@
-﻿Prediction (written before judge iteration):
+﻿Prediction (written before judge iteration — committed before judge_v2 was created):
 The judge will mark mode_2 cases (case_09) as PASS even though the answer omits
 the critical 30-day seepage limit and 60-day vacancy condition from HO-2306,
 because the answer correctly confirms the endorsement amends E-17 and the judge
 will treat the directional correctness as sufficient without noticing the missing
 threshold details.
+
+---
+
+Outcome (written after running judge_v1 and reading disagreements):
+
+The prediction was WRONG in its specific target.
+
+case_09 (mode_2) was correctly marked FAIL by judge_v1 — the judge DID notice the
+missing threshold details. The prediction got the failure mechanism right (judge
+lenient on partial answers) but wrong about which case it would affect.
+
+The actual 5 disagreements were all in the opposite direction:
+  - 4 cases where the ASSERTION was too aggressive (not the LLM judge):
+      case_07, case_12, case_22 — denial detection fired on qualifying clauses and
+      endorsement denials, not true policy exclusion denials.
+      case_24 — assertion regex used ASCII hyphen but answer had Unicode en-dash in E-05.
+  - 1 case where the LLM JUDGE was too strict (case_01):
+      Judge required HO-2306 conditions for a question that only asked "what to check",
+      not "what are the conditions". Scope of completeness was misapplied.
+
+Who was right in all 5 disagreements: the human (me).
+
+What the iteration (judge_v2) fixed:
+  - Added a scope-awareness instruction: completeness is judged against what the
+    question DIRECTLY asked, not every fact in the ground truth.
+  - Added case_01 as a PASS few-shot example (process question vs. condition question).
+  - Added case_09 as a FAIL few-shot example (question directly asked HOW it changes E-17).
+  - Fixed the assertion bugs separately in code (unicode dash, opening-only denial detection).

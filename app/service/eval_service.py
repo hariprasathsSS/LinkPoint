@@ -1,4 +1,4 @@
-﻿# app/service/eval_service.py
+# app/service/eval_service.py
 #
 # Orchestrates the two-tier eval system:
 #   Tier 1 — deterministic assertions (regex, no LLM cost)
@@ -31,13 +31,29 @@ JUDGE_V2_PATH = EVAL_DIR / "judge_v2.txt"
 # Tier 1 — Deterministic assertions
 # ---------------------------------------------------------------------------
 
-DENIAL_KEYWORDS = ["not covered", "does not cover", "excluded", "exclusion applies",
-                   "no.", "no,", "cannot be covered", "will not cover"]
+DENIAL_KEYWORDS = ["not covered", "does not cover", "exclusion applies",
+                   "cannot be covered", "will not cover"]
+
+# Matches E-17, E‑17, E–17 (ASCII hyphen, Unicode en-dash, Unicode hyphen)
+_EXCLUSION_ID_RE = re.compile(r"E[\-\u2011\u2012\u2013]\d{2}")
 
 
 def _looks_like_denial(answer: str) -> bool:
-    low = answer.lower()
-    return any(kw in low for kw in DENIAL_KEYWORDS)
+    """
+    True only when the answer's PRIMARY direction is a policy exclusion denial.
+    Checks the first 120 characters so qualifying clauses later in the answer
+    (e.g. 'would be excluded') do not trigger a false positive.
+    Endorsement-condition denials (e.g. 'not covered under HO-2306 because vacancy
+    exceeded 60 days') are excluded — they do not require a numbered exclusion code.
+    """
+    opening = answer.strip()[:120].lower()
+    # Skip if the denial is about endorsement conditions, not a policy exclusion
+    if any(kw in opening for kw in ["endorsement", "ho-2306", "ho-0304"]):
+        return False
+    # Starts with "No" or the opening sentence says not covered
+    if opening.startswith("no.") or opening.startswith("no,"):
+        return True
+    return any(kw in opening for kw in DENIAL_KEYWORDS)
 
 
 def _is_out_of_corpus_mode(mode: str) -> bool:
@@ -53,7 +69,7 @@ def run_assertions(answer: str, mode: str) -> tuple[bool, str | None]:
 
     # Assertion 1 — denial must cite an exclusion code (E-XX)
     if _looks_like_denial(answer):
-        if not re.search(r"E-\d{2}", answer):
+        if not _EXCLUSION_ID_RE.search(answer):
             return False, "denial_missing_exclusion_id"
 
     # Assertion 2 — out-of-corpus questions must deflect correctly
@@ -74,7 +90,7 @@ def _load_judge_prompt(version: str) -> str:
     path = JUDGE_V1_PATH if version == "v1" else JUDGE_V2_PATH
     if not path.exists():
         raise FileNotFoundError(f"Judge prompt not found: {path}")
-    return path.read_text(encoding="utf-8").strip()
+    return path.read_text(encoding="utf-8-sig").strip()
 
 
 def _build_judge_call(system_prompt: str, question: str, answer: str, ground_truth: str) -> str:
@@ -175,7 +191,7 @@ class EvalService:
 
     def run_all(self, judge_version: str) -> RunResponse:
         """Run the judge on all cases in eval_cases.json."""
-        cases = json.loads(EVAL_CASES_PATH.read_text(encoding="utf-8"))
+        cases = json.loads(EVAL_CASES_PATH.read_text(encoding="utf-8-sig"))
 
         results: list[JudgeResponse] = []
         assertions_run = 0
@@ -246,14 +262,14 @@ class EvalService:
                 "labels_25.json not found. Write your hand labels first and commit the file."
             )
 
-        labels: list[dict] = json.loads(LABELS_PATH.read_text(encoding="utf-8"))
+        labels: list[dict] = json.loads(LABELS_PATH.read_text(encoding="utf-8-sig"))
         label_map = {entry["case_id"]: entry for entry in labels}
 
         # Run the judge to get verdicts
         run_result = self.run_all(judge_version)
         verdict_map = {r.case_id: r for r in run_result.results}
 
-        cases = json.loads(EVAL_CASES_PATH.read_text(encoding="utf-8"))
+        cases = json.loads(EVAL_CASES_PATH.read_text(encoding="utf-8-sig"))
 
         agreements = 0
         disagreements = 0

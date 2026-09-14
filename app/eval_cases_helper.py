@@ -1,4 +1,4 @@
-﻿# app/eval_cases_helper.py
+# app/eval_cases_helper.py
 # Thin helper so the eval route can look up ground_truth by case_id
 # without loading the full EvalService.
 
@@ -12,7 +12,7 @@ _cache: dict[str, dict] | None = None
 def _load() -> dict[str, dict]:
     global _cache
     if _cache is None:
-        cases = json.loads(_EVAL_CASES_PATH.read_text(encoding="utf-8"))
+        cases = json.loads(_EVAL_CASES_PATH.read_text(encoding="utf-8-sig"))
         _cache = {c["case_id"]: c for c in cases}
     return _cache
 
