@@ -1,4 +1,5 @@
 # app/dependencies.py
+from functools import lru_cache
 
 from app.service.ingestion_service import IngestionService
 from app.service.chunking_service import ChunkingService
@@ -14,6 +15,7 @@ from app.service.reranker_service import RerankerService
 from app.service.clustering_service import ClusteringService
 
 
+@lru_cache(maxsize=1)
 def get_ingestion_service():
 
     parser = ParserSelector()
@@ -32,6 +34,7 @@ def get_ingestion_service():
         vector_store_service
     )
 
+@lru_cache(maxsize=1)
 def get_query_service():
 
     embedder = EmbeddingFactory.create()
@@ -52,6 +55,7 @@ def get_query_service():
         llm_service
     )
 
+@lru_cache(maxsize=1)
 def get_vector_store_service():
     return VectorStoreService()
 

@@ -1,5 +1,5 @@
 # app/service/retrieval_service.py
-
+import asyncio
 from app.config import Settings
 from app.utils.trace_logger import log_trace
 
@@ -68,10 +68,11 @@ class RetrievalService:
         )
         combined_results = self._merge_results(global_results, cluster_results)
         normalized_results = self._normalize_results(combined_results)
-        reranked_results = self.reranker_service.rerank(
-            query=request.query,
-            results=normalized_results,
-            top_k=request.top_k
+        reranked_results = await asyncio.to_thread(
+            self.reranker_service.rerank,
+            request.query,
+            normalized_results,
+            request.top_k
         )
 
         # Step 3: Build Prompt
@@ -81,7 +82,7 @@ class RetrievalService:
         )
 
         # Step 4: LLM Call
-        answer = self.llm_service.generate(prompt)
+        answer = await asyncio.to_thread(self.llm_service.generate, prompt)
 
         sources = [
             {

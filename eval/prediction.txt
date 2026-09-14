@@ -1,0 +1,6 @@
+﻿Prediction (written before judge iteration):
+The judge will mark mode_2 cases (case_09) as PASS even though the answer omits
+the critical 30-day seepage limit and 60-day vacancy condition from HO-2306,
+because the answer correctly confirms the endorsement amends E-17 and the judge
+will treat the directional correctness as sufficient without noticing the missing
+threshold details.
