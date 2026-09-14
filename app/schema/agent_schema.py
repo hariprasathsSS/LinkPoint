@@ -17,3 +17,4 @@ class AgentResponse(BaseModel):
     total_tokens: int
     total_cost: float
     budget_termination: str | None = None
+    trajectory: list[str] = []

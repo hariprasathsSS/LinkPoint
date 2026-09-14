@@ -5,7 +5,7 @@ from typing import Dict, Any
 from app.schema.agent_schema import ClaimStatus
 from app.dependencies import get_query_service
 
-CLAIMS_FILE = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "eval", "claims_10.json")
+CLAIMS_FILE = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "eval", "claims_w8.json")
 
 def _load_claims() -> Dict[str, Any]:
     if not os.path.exists(CLAIMS_FILE):

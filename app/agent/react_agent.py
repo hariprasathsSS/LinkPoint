@@ -75,6 +75,7 @@ async def run_agent(claim_id: str) -> AgentResponse:
     total_tokens = 0
     total_cost = 0.0
     termination_reason = None
+    trajectory = []
     
     while True:
         # Budget Checks
@@ -118,13 +119,17 @@ async def run_agent(claim_id: str) -> AgentResponse:
                 args = json.loads(tool_call.function.arguments)
                 
                 if fn_name == "get_claim":
-                    result = get_claim(args["claim_id"])
+                    result = get_claim(args.get("claim_id", ""))
+                    trajectory.append("get_claim")
                 elif fn_name == "get_adjuster_notes":
                     # Pass the enum value
-                    status = ClaimStatus[args["status"]] if args["status"] in [e.name for e in ClaimStatus] else ClaimStatus.OPEN
-                    result = get_adjuster_notes(args["claim_id"], status)
+                    status_val = args.get("status", "OPEN")
+                    status = ClaimStatus[status_val] if status_val in [e.name for e in ClaimStatus] else ClaimStatus.OPEN
+                    result = get_adjuster_notes(args.get("claim_id", ""), status)
+                    trajectory.append("get_adjuster_notes")
                 elif fn_name == "search_policy":
-                    result = await search_policy(args["query"])
+                    result = await search_policy(args.get("query", ""))
+                    trajectory.append("search_policy")
                 else:
                     result = "Unknown tool"
                     
@@ -137,6 +142,26 @@ async def run_agent(claim_id: str) -> AgentResponse:
         else:
             # Final Answer reached
             decision = msg.content
+            
+            # --- WEEK 8 DEFENSE: Output Validator (Least Privilege) ---
+            # If the agent approves, we mathematically enforce the claim amount limit.
+            if "APPROVED" in decision.upper():
+                import re
+                # Find all dollar amounts the agent mentioned
+                payouts = [float(n.replace(',', '')) for n in re.findall(r'\$\s*(\d+(?:,\d{3})*(?:\.\d+)?)', decision)]
+                if payouts:
+                    try:
+                        # Fetch the original hard facts (bypassing the AI)
+                        claim_facts = get_claim(claim_id)
+                        max_limit = float(re.search(r'Claim Amount: \$([0-9,.]+)', claim_facts).group(1).replace(',',''))
+                        
+                        # Block the payout if it exceeds the limit (stops prompt injections)
+                        if any(p > max_limit for p in payouts):
+                            decision = f"BLOCKED BY SECURITY VALIDATOR: Agent attempted to approve an amount (${max(payouts):.2f}) that exceeds the original claim limit (${max_limit:.2f}). Prompt Injection detected."
+                    except Exception as e:
+                        pass
+            # ------------------------------------------------------------
+            
             break
             
     if termination_reason:
@@ -151,5 +176,6 @@ async def run_agent(claim_id: str) -> AgentResponse:
         latency_seconds=latency,
         total_tokens=total_tokens,
         total_cost=total_cost,
-        budget_termination=termination_reason
+        budget_termination=termination_reason,
+        trajectory=trajectory
     )

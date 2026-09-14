@@ -70,5 +70,6 @@ async def run_workflow(claim_id: str) -> AgentResponse:
         latency_seconds=latency,
         total_tokens=total_tokens,
         total_cost=total_cost,
-        budget_termination=None
+        budget_termination=None,
+        trajectory=["get_claim", "get_adjuster_notes", "search_policy"]
     )
