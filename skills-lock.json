@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "wait-what": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/productivity/wait-what/SKILL.md",
+      "computedHash": "179a857fabd08c894e8e5b30baa7488147760ee1d58696ebd24bd4f6ead21699"
+    }
+  }
+}

@@ -5,7 +5,7 @@ from typing import Dict, Any
 from app.schema.agent_schema import ClaimStatus
 from app.dependencies import get_query_service
 
-CLAIMS_FILE = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "eval", "claims_w8.json")
+CLAIMS_FILE = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "eval", "claims_data.json")
 
 def _load_claims() -> Dict[str, Any]:
     if not os.path.exists(CLAIMS_FILE):
@@ -72,3 +72,24 @@ async def search_policy(query: str) -> str:
         return res["answer"]
     except Exception as e:
         return f"Error searching policy: {str(e)}"
+
+def search_claims(attribute: str, value: str) -> str:
+    """
+    Search for claims by a specific attribute (e.g., 'status', 'customer_name', 'peril', 'date_of_loss').
+    Returns a list of matching claim IDs and brief summaries.
+    """
+    try:
+        claims = _load_claims()
+        matches = []
+        for cid, c in claims.items():
+            if str(c.get(attribute, "")).lower() == value.lower():
+                matches.append(
+                    f"Claim ID: {cid} | Customer: {c.get('customer_name', 'N/A')} | "
+                    f"Status: {c['status']} | Amount: ${c['claim_amount']} | Peril: {c.get('peril', 'N/A')}"
+                )
+        
+        if not matches:
+            return f"No claims found where {attribute} = {value}."
+        return f"Found {len(matches)} matching claims:\n" + "\n".join(matches)
+    except Exception as e:
+        return f"Error searching claims: {str(e)}"

@@ -55,7 +55,7 @@ async def count_tools(config_path: str):
     print("-" * 50)
     for i, t in enumerate(all_tools, 1):
         print(f"  {i}. [{t['server']}] {t['tool']}")
-        print(f"     → {t['description_preview']}...")
+        print(f"     -> {t['description_preview']}...")
     print()
     return all_tools
 

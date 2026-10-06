@@ -1,5 +1,6 @@
 from groq import Groq
 from app.config import Settings
+from app.agents.telemetry import record_usage
 import httpx
 
 class LLMService:
@@ -23,6 +24,8 @@ class LLMService:
             ],
             **self.GENERATION_PARAMS
         )
+
+        record_usage(response.usage)  # no-op unless a telemetry trace is active
 
         return response.choices[0].message.content
 

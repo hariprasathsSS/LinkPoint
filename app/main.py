@@ -11,3 +11,5 @@ app.include_router(qrouter)
 app.include_router(chunk_router)
 app.include_router(eval_router)
 app.include_router(claim_router)
+from app.routes.v1.chat import chat_router
+app.include_router(chat_router)
