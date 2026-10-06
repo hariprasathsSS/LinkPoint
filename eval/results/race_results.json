@@ -1,0 +1,1310 @@
+{
+  "rows": {
+    "single": [
+      {
+        "case_id": "case_01",
+        "question": "Is a claim for water damage automatically covered, or does exclusion E-17 need to be checked first?",
+        "mode": "single",
+        "answer": "Water\u2011damage claims are **not automatically covered**.  \nThe policy contains **Exclusion\u202fE\u201117** (Form\u202fHO\u20110304) that specifically excludes losses caused by **continuous or repeated seepage of water or steam that persists for 14\u202fdays or more** (including resulting mold or rot).  \n\nTherefore, before a water\u2011damage claim can be accepted you must:\n\n1. **Determine the duration of the seepage** \u2013 if the water/steam has been present for 14\u202fdays or longer, the loss is excluded under E\u201117.  \n2. **Check for the endorsement HO\u20112306** \u2013 if the policyholder has purchased this endorsement, losses caused by seepage or leakage that last **fewer than 30\u202fdays** are covered (subject to the endorsement\u2019s conditions, such as the dwelling not being vacant for more than 60 consecutive days during the policy period).  \n\nIf the water damage is due to a short\u2011term leak (less than 14\u202fdays) and the policy does **not** carry endorsement HO\u20112306, the loss is still excluded under E\u201117. Only if the leak is under 30\u202fdays **and** the endorsement is in force does coverage apply.",
+        "latency": 10.579712867736816,
+        "total_tokens": 2206,
+        "cost": 0.001884,
+        "hops": [
+          {
+            "seq": 1,
+            "arm": "single",
+            "case_id": "case_01",
+            "from": "user",
+            "to": "single_agent",
+            "prompt_tokens": 379,
+            "completion_tokens": 96,
+            "total_tokens": 475
+          },
+          {
+            "seq": 2,
+            "arm": "single",
+            "case_id": "case_01",
+            "from": "single_agent",
+            "to": "rag_tool",
+            "prompt_tokens": 386,
+            "completion_tokens": 309,
+            "total_tokens": 695
+          },
+          {
+            "seq": 3,
+            "arm": "single",
+            "case_id": "case_01",
+            "from": "user",
+            "to": "single_agent",
+            "prompt_tokens": 660,
+            "completion_tokens": 376,
+            "total_tokens": 1036
+          }
+        ],
+        "verdict": "PASS",
+        "judge_reason": "The answer correctly states that E\u201117 must be checked first and that endorsement HO\u20112306 covers seepage under 30 days only if the dwelling was not vacant for more than 60 consecutive days."
+      },
+      {
+        "case_id": "case_02",
+        "question": "Does exclusion E-17 apply under form HO-0304 edition 03-24 if a pipe seeps for three weeks?",
+        "mode": "single",
+        "answer": "**Exclusion E\u201117 \u2013 Water Damage, Continuous Seepage (HO\u20110304, Edition\u202f03\u201124)**  \n\n- **Coverage:** Excludes loss caused by water or steam that **seeps for 14\u202fdays or more** (continuous or intermittent) and any resulting mold or rot.  \n- **Application to a 3\u2011week seepage:**  \n  - A pipe that has been seeping for **three weeks (\u2248\u202f21\u202fdays)** meets the 14\u2011day threshold.  \n  - Therefore, **Exclusion\u202fE\u201117 applies** to the loss.  \n\n**Conditional note:**  \n- The exclusion is subject to any endorsements that amend or remove it (e.g., Endorsement\u202fHO\u20112306).  \n- If an endorsement has been added that modifies the 14\u2011day rule or provides coverage for seepage, the exclusion may not apply.  \n\nSo, under the base HO\u20110304, Edition\u202f03\u201124, a pipe that has been seeping for three weeks is covered by Exclusion\u202fE\u201117 unless an endorsement has altered that exclusion.",
+        "latency": 18.266621351242065,
+        "total_tokens": 2103,
+        "cost": 0.0017695,
+        "hops": [
+          {
+            "seq": 1,
+            "arm": "single",
+            "case_id": "case_02",
+            "from": "user",
+            "to": "single_agent",
+            "prompt_tokens": 384,
+            "completion_tokens": 103,
+            "total_tokens": 487
+          },
+          {
+            "seq": 2,
+            "arm": "single",
+            "case_id": "case_02",
+            "from": "single_agent",
+            "to": "rag_tool",
+            "prompt_tokens": 428,
+            "completion_tokens": 273,
+            "total_tokens": 701
+          },
+          {
+            "seq": 3,
+            "arm": "single",
+            "case_id": "case_02",
+            "from": "user",
+            "to": "single_agent",
+            "prompt_tokens": 573,
+            "completion_tokens": 342,
+            "total_tokens": 915
+          }
+        ],
+        "verdict": "PASS",
+        "judge_reason": "The answer correctly states that E\u201117 applies for a 21\u2011day seepage and includes the 14\u2011day threshold, matching the policy\u2019s direction and critical condition."
+      },
+      {
+        "case_id": "case_03",
+        "question": "How is a covered dwelling loss settled - replacement cost or actual cash value?",
+        "mode": "single",
+        "answer": "",
+        "latency": 19.033835649490356,
+        "total_tokens": 2564,
+        "cost": 0.002423,
+        "hops": [
+          {
+            "seq": 1,
+            "arm": "single",
+            "case_id": "case_03",
+            "from": "user",
+            "to": "single_agent",
+            "prompt_tokens": 373,
+            "completion_tokens": 109,
+            "total_tokens": 482
+          },
+          {
+            "seq": 2,
+            "arm": "single",
+            "case_id": "case_03",
+            "from": "single_agent",
+            "to": "rag_tool",
+            "prompt_tokens": 370,
+            "completion_tokens": 432,
+            "total_tokens": 802
+          },
+          {
+            "seq": 3,
+            "arm": "single",
+            "case_id": "case_03",
+            "from": "user",
+            "to": "single_agent",
+            "prompt_tokens": 680,
+            "completion_tokens": 600,
+            "total_tokens": 1280
+          }
+        ],
+        "verdict": "FAIL",
+        "judge_reason": "Answer is empty \u2014 case has not been queried against the live app yet."
+      },
+      {
+        "case_id": "case_04",
+        "question": "Does exclusion E-17 apply if the leak was discovered after 12 days?",
+        "mode": "single",
+        "answer": "**Exclusion E\u201117 \u2013 Water Damage, Continuous Seepage**\n\n- **Trigger:** The exclusion applies only when water or steam has been seeping into the dwelling for **14 days or more**.  \n- **Your scenario:** The leak was discovered after **12 days** of continuous seepage.  \n  - Because the 14\u2011day threshold has not yet been reached, **E\u201117 does not apply** at the time of discovery.  \n  - If the seepage continued beyond the 14\u2011day mark after discovery, the exclusion would then become effective for any damage that occurs after that point.  \n\nSo, with a 12\u2011day discovery, the loss is **not** excluded under E\u201117, but it could become excluded if the seepage persists past 14 days.",
+        "latency": 16.165350198745728,
+        "total_tokens": 2200,
+        "cost": 0.0019,
+        "hops": [
+          {
+            "seq": 1,
+            "arm": "single",
+            "case_id": "case_04",
+            "from": "user",
+            "to": "single_agent",
+            "prompt_tokens": 374,
+            "completion_tokens": 41,
+            "total_tokens": 415
+          },
+          {
+            "seq": 2,
+            "arm": "single",
+            "case_id": "case_04",
+            "from": "single_agent",
+            "to": "rag_tool",
+            "prompt_tokens": 343,
+            "completion_tokens": 368,
+            "total_tokens": 711
+          },
+          {
+            "seq": 3,
+            "arm": "single",
+            "case_id": "case_04",
+            "from": "user",
+            "to": "single_agent",
+            "prompt_tokens": 683,
+            "completion_tokens": 391,
+            "total_tokens": 1074
+          }
+        ],
+        "verdict": "PASS",
+        "judge_reason": "The answer correctly states that E\u201117 does not apply after 12 days and includes the 14\u2011day threshold, matching the policy\u2019s requirement."
+      },
+      {
+        "case_id": "case_05",
+        "question": "Is there a discount for bundling home and auto insurance?",
+        "mode": "single",
+        "answer": "I'm sorry, but I don't have that information.",
+        "latency": 21.702566146850586,
+        "total_tokens": 2468,
+        "cost": 0.0017340000000000003,
+        "hops": [
+          {
+            "seq": 1,
+            "arm": "single",
+            "case_id": "case_05",
+            "from": "user",
+            "to": "single_agent",
+            "prompt_tokens": 370,
+            "completion_tokens": 82,
+            "total_tokens": 452
+          },
+          {
+            "seq": 2,
+            "arm": "single",
+            "case_id": "case_05",
+            "from": "single_agent",
+            "to": "rag_tool",
+            "prompt_tokens": 323,
+            "completion_tokens": 149,
+            "total_tokens": 472
+          },
+          {
+            "seq": 3,
+            "arm": "single",
+            "case_id": "case_05",
+            "from": "user",
+            "to": "single_agent",
+            "prompt_tokens": 471,
+            "completion_tokens": 36,
+            "total_tokens": 507
+          },
+          {
+            "seq": 4,
+            "arm": "single",
+            "case_id": "case_05",
+            "from": "single_agent",
+            "to": "rag_tool",
+            "prompt_tokens": 274,
+            "completion_tokens": 187,
+            "total_tokens": 461
+          },
+          {
+            "seq": 5,
+            "arm": "single",
+            "case_id": "case_05",
+            "from": "user",
+            "to": "single_agent",
+            "prompt_tokens": 530,
+            "completion_tokens": 46,
+            "total_tokens": 576
+          }
+        ],
+        "verdict": "PASS",
+        "judge_reason": "Out-of-corpus question correctly deflected \u2014 assertion sufficient."
+      },
+      {
+        "case_id": "case_06",
+        "question": "Is mold damage covered if it results from a covered water loss?",
+        "mode": "single",
+        "answer": "**Answer:**\n\nYes \u2013 mold damage is covered **only** when it results from a water loss that is itself covered by the policy.  \n- If the water loss is a **sudden and accidental discharge or overflow** from a plumbing, heating, air\u2011conditioning system, or household appliance, the mold that develops from that event is covered.  \n- Mold that results from **continuous seepage or leakage lasting 14\u202fdays or more** is excluded (E\u201117).  \n- For seepage or leakage lasting **fewer than 30\u202fdays** (and the dwelling is not vacant for >60 consecutive days), the policy will cover the loss, including any resulting mold.  \n\nSo, mold damage is covered when it follows a covered water loss, but it is excluded if the water loss is prolonged continuous seepage.",
+        "latency": 18.38644790649414,
+        "total_tokens": 2146,
+        "cost": 0.0018309999999999997,
+        "hops": [
+          {
+            "seq": 1,
+            "arm": "single",
+            "case_id": "case_06",
+            "from": "user",
+            "to": "single_agent",
+            "prompt_tokens": 371,
+            "completion_tokens": 50,
+            "total_tokens": 421
+          },
+          {
+            "seq": 2,
+            "arm": "single",
+            "case_id": "case_06",
+            "from": "single_agent",
+            "to": "rag_tool",
+            "prompt_tokens": 420,
+            "completion_tokens": 535,
+            "total_tokens": 955
+          },
+          {
+            "seq": 3,
+            "arm": "single",
+            "case_id": "case_06",
+            "from": "user",
+            "to": "single_agent",
+            "prompt_tokens": 597,
+            "completion_tokens": 173,
+            "total_tokens": 770
+          }
+        ],
+        "verdict": "PASS",
+        "judge_reason": "The answer correctly states that mold from sudden accidental discharge is covered, that continuous seepage lasting 14 days or more is excluded (E\u201117), and it includes the 14\u2011day threshold."
+      },
+      {
+        "case_id": "case_07",
+        "question": "If the dwelling was vacant for 90 days and there is a 20-day seepage loss, does endorsement HO-2306 cover it?",
+        "mode": "single",
+        "answer": "Under **HO\u20112306** the loss is covered only if **both** of the following conditions are met:\n\n| Condition | Requirement | Status in this case |\n|-----------|-------------|---------------------|\n| **Vacancy** | Dwelling must **not** have been vacant or unoccupied for **more than 60 consecutive days** during the policy period. | 90\u202fdays vacant \u2192 **exceeds the 60\u2011day limit**. |\n| **Seepage duration** | Loss must last **fewer than 30 days**. | 20\u202fdays seepage \u2192 **within the 30\u2011day limit**. |\n\nBecause the dwelling was vacant for **90 days**, the vacancy condition is not satisfied, so the 20\u2011day seepage loss is **not covered** by endorsement **HO\u20112306**.",
+        "latency": 13.36212682723999,
+        "total_tokens": 1951,
+        "cost": 0.0015655,
+        "hops": [
+          {
+            "seq": 1,
+            "arm": "single",
+            "case_id": "case_07",
+            "from": "user",
+            "to": "single_agent",
+            "prompt_tokens": 387,
+            "completion_tokens": 65,
+            "total_tokens": 452
+          },
+          {
+            "seq": 2,
+            "arm": "single",
+            "case_id": "case_07",
+            "from": "single_agent",
+            "to": "rag_tool",
+            "prompt_tokens": 396,
+            "completion_tokens": 281,
+            "total_tokens": 677
+          },
+          {
+            "seq": 3,
+            "arm": "single",
+            "case_id": "case_07",
+            "from": "user",
+            "to": "single_agent",
+            "prompt_tokens": 578,
+            "completion_tokens": 244,
+            "total_tokens": 822
+          }
+        ],
+        "verdict": "PASS",
+        "judge_reason": "The answer correctly states that coverage does not apply because the dwelling was vacant for 90 days, and it includes the required vacancy condition from the ground truth."
+      },
+      {
+        "case_id": "case_08",
+        "question": "Does this policy cover auto accidents?",
+        "mode": "single",
+        "answer": "I'm sorry, but I don't have that information.",
+        "latency": 12.657865762710571,
+        "total_tokens": 1348,
+        "cost": 0.0009000000000000001,
+        "hops": [
+          {
+            "seq": 1,
+            "arm": "single",
+            "case_id": "case_08",
+            "from": "user",
+            "to": "single_agent",
+            "prompt_tokens": 365,
+            "completion_tokens": 39,
+            "total_tokens": 404
+          },
+          {
+            "seq": 2,
+            "arm": "single",
+            "case_id": "case_08",
+            "from": "single_agent",
+            "to": "rag_tool",
+            "prompt_tokens": 334,
+            "completion_tokens": 151,
+            "total_tokens": 485
+          },
+          {
+            "seq": 3,
+            "arm": "single",
+            "case_id": "case_08",
+            "from": "user",
+            "to": "single_agent",
+            "prompt_tokens": 423,
+            "completion_tokens": 36,
+            "total_tokens": 459
+          }
+        ],
+        "verdict": "PASS",
+        "judge_reason": "Out-of-corpus question correctly deflected \u2014 assertion sufficient."
+      },
+      {
+        "case_id": "case_09",
+        "question": "Does endorsement HO-2306 change how exclusion E-17 applies?",
+        "mode": "single",
+        "answer": "**Effect of Endorsement\u202fHO\u20112306 on Exclusion\u202fE\u201117**\n\n| Item | Original Policy (Form\u202fHO\u20110304) | After Endorsement\u202fHO\u20112306 |\n|------|--------------------------------|---------------------------|\n| **Exclusion\u202fE\u201117** | \u201cLoss caused by seepage or leakage of water or steam lasting **30\u202fdays or more** is excluded.\u201d | The exclusion is **modified**: the policy will **pay** for loss caused by seepage or leakage of water or steam **lasting fewer than 30\u202fdays**. |\n| **Vacancy Condition** | No specific vacancy limitation applied to this exclusion. | The coverage for seepage lasting <30\u202fdays is **subject to** the dwelling **not being vacant or unoccupied for more than 60 consecutive days** during the policy period. |\n| **Other Terms** | All other terms, conditions, and exclusions of Form\u202fHO\u20110304 remain unchanged. | No other changes to E\u201117 or related clauses. |\n\n**Summary**\n\n- Endorsement\u202fHO\u20112306 **does change** how exclusion\u202fE\u201117 applies.  \n- It **removes the exclusion** for seepage or leakage lasting **less than 30\u202fdays**, provided the dwelling is **not vacant for >60 consecutive days**.  \n- All other aspects of E\u201117 and the policy remain as originally written.",
+        "latency": 13.852795839309692,
+        "total_tokens": 2012,
+        "cost": 0.001712,
+        "hops": [
+          {
+            "seq": 1,
+            "arm": "single",
+            "case_id": "case_09",
+            "from": "user",
+            "to": "single_agent",
+            "prompt_tokens": 372,
+            "completion_tokens": 53,
+            "total_tokens": 425
+          },
+          {
+            "seq": 2,
+            "arm": "single",
+            "case_id": "case_09",
+            "from": "single_agent",
+            "to": "rag_tool",
+            "prompt_tokens": 389,
+            "completion_tokens": 309,
+            "total_tokens": 698
+          },
+          {
+            "seq": 3,
+            "arm": "single",
+            "case_id": "case_09",
+            "from": "user",
+            "to": "single_agent",
+            "prompt_tokens": 545,
+            "completion_tokens": 344,
+            "total_tokens": 889
+          }
+        ],
+        "verdict": "PASS",
+        "judge_reason": "The answer correctly states that HO\u20112306 covers seepage under 30 days and requires the dwelling not to be vacant for more than 60 consecutive days, matching all critical conditions."
+      },
+      {
+        "case_id": "case_10",
+        "question": "What are the claimant's duties after a loss?",
+        "mode": "single",
+        "answer": "ERROR: max iterations reached without a final answer.",
+        "latency": 47.220914363861084,
+        "total_tokens": 6981,
+        "cost": 0.005120499999999999,
+        "hops": [
+          {
+            "seq": 1,
+            "arm": "single",
+            "case_id": "case_10",
+            "from": "user",
+            "to": "single_agent",
+            "prompt_tokens": 368,
+            "completion_tokens": 68,
+            "total_tokens": 436
+          },
+          {
+            "seq": 2,
+            "arm": "single",
+            "case_id": "case_10",
+            "from": "single_agent",
+            "to": "rag_tool",
+            "prompt_tokens": 371,
+            "completion_tokens": 168,
+            "total_tokens": 539
+          },
+          {
+            "seq": 3,
+            "arm": "single",
+            "case_id": "case_10",
+            "from": "user",
+            "to": "single_agent",
+            "prompt_tokens": 487,
+            "completion_tokens": 123,
+            "total_tokens": 610
+          },
+          {
+            "seq": 4,
+            "arm": "single",
+            "case_id": "case_10",
+            "from": "single_agent",
+            "to": "rag_tool",
+            "prompt_tokens": 383,
+            "completion_tokens": 266,
+            "total_tokens": 649
+          },
+          {
+            "seq": 5,
+            "arm": "single",
+            "case_id": "case_10",
+            "from": "user",
+            "to": "single_agent",
+            "prompt_tokens": 719,
+            "completion_tokens": 91,
+            "total_tokens": 810
+          },
+          {
+            "seq": 6,
+            "arm": "single",
+            "case_id": "case_10",
+            "from": "single_agent",
+            "to": "rag_tool",
+            "prompt_tokens": 418,
+            "completion_tokens": 178,
+            "total_tokens": 596
+          },
+          {
+            "seq": 7,
+            "arm": "single",
+            "case_id": "case_10",
+            "from": "user",
+            "to": "single_agent",
+            "prompt_tokens": 832,
+            "completion_tokens": 72,
+            "total_tokens": 904
+          },
+          {
+            "seq": 8,
+            "arm": "single",
+            "case_id": "case_10",
+            "from": "single_agent",
+            "to": "rag_tool",
+            "prompt_tokens": 405,
+            "completion_tokens": 290,
+            "total_tokens": 695
+          },
+          {
+            "seq": 9,
+            "arm": "single",
+            "case_id": "case_10",
+            "from": "user",
+            "to": "single_agent",
+            "prompt_tokens": 960,
+            "completion_tokens": 77,
+            "total_tokens": 1037
+          },
+          {
+            "seq": 10,
+            "arm": "single",
+            "case_id": "case_10",
+            "from": "single_agent",
+            "to": "rag_tool",
+            "prompt_tokens": 408,
+            "completion_tokens": 297,
+            "total_tokens": 705
+          }
+        ],
+        "verdict": "FAIL",
+        "judge_reason": "The answer does not provide any of the required duties."
+      }
+    ],
+    "multi": [
+      {
+        "case_id": "case_01",
+        "question": "Is a claim for water damage automatically covered, or does exclusion E-17 need to be checked first?",
+        "mode": "multi",
+        "answer": "**Short answer:**  \nNo \u2013 a water\u2011damage claim is **not automatically covered**.  You must first look at the policy\u2019s **Exclusion\u202fE\u201117** (the \u201cWater\u2011Damage Exclusion\u201d) to see whether the loss falls within that exclusion.  If it does, the claim will be denied unless an endorsement or rider removes or limits the exclusion.\n\n---\n\n## How to determine coverage\n\n| Step | What to check | Why it matters |\n|------|---------------|----------------|\n| **1. Locate the policy** | Find the section titled \u201cExclusions\u201d (often \u201cE\u2011Exclusions\u201d). | Exclusion\u202fE\u201117 is listed there. |\n| **2. Read Exclusion\u202fE\u201117** | The standard Homeowners Form\u202fHO\u20110304 defines it as: <br>\u2022 *\u201cLoss caused by water or steam that **seep or leak for 14\u202fdays or more** (continuous or repeated seepage), including any resulting mold or rot.\u201d* | This is the default rule that excludes most prolonged water\u2011damage losses. |\n| **3. Match the loss to the exclusion** | Identify the cause (burst pipe, leaking roof, etc.) and the duration of seepage. | If the loss meets the 14\u2011day threshold, it is excluded. |\n| **4. Check for endorsements/riders** | Look for any endorsements that modify E\u201117. | The most common one is **HO\u20112306 \u2013 Seepage Coverage Endorsement**. |\n| **5. Review endorsement terms** | HO\u20112306 adds coverage for seepage or leakage lasting **fewer than 30\u202fdays** (instead of 14\u202fdays).  Conditions: <br>\u2022 Dwelling must not have been vacant/unoccupied for more than 60 consecutive days during the policy period. | If the endorsement applies, the claim may be paid (subject to the usual deductible and limits). |\n| **6. Verify other exclusions** | \u2022 Flood\u2011related water damage (covered under a separate flood policy). <br>\u2022 Damage from a sudden burst pipe that is not seepage (may be covered under \u201csudden and accidental\u201d water damage). | These can affect whether the claim is payable even if E\u201117 is not triggered. |\n| **7. Confirm reporting and deductible** | \u2022 Report the loss within the policy\u2019s reporting period (typically 30\u202fdays). <br>\u2022 Pay the standard deductible (no extra deductible for seepage under HO\u20112306). | Failure to report on time or to meet deductible can still deny the claim. |\n\n---\n\n## Bottom line\n\n- **Water damage is not automatically covered.**  \n- **Exclusion\u202fE\u201117 must be checked first** to see if the loss is excluded.  \n- If the loss **does not meet the 14\u2011day seepage rule** (or if an endorsement like HO\u20112306 applies and the conditions are satisfied), the claim may be paid, subject to the policy\u2019s limits, deductible, and other terms.  \n- Always confirm the exact wording in the policy you hold, as endorsements or rider changes can alter the exclusion.\n\nIf you need help locating the specific policy language or verifying whether an endorsement applies to your policy, let me know and I can walk you through the next steps.",
+        "latency": 6.117124795913696,
+        "total_tokens": 6199,
+        "cost": 0.0057044999999999995,
+        "hops": [
+          {
+            "seq": 1,
+            "arm": "multi",
+            "case_id": "case_01",
+            "from": "user",
+            "to": "manager_router",
+            "prompt_tokens": 247,
+            "completion_tokens": 145,
+            "total_tokens": 392
+          },
+          {
+            "seq": 2,
+            "arm": "multi",
+            "case_id": "case_01",
+            "from": "manager",
+            "to": "notes_worker",
+            "prompt_tokens": 316,
+            "completion_tokens": 568,
+            "total_tokens": 884
+          },
+          {
+            "seq": 3,
+            "arm": "multi",
+            "case_id": "case_01",
+            "from": "manager",
+            "to": "coverage_worker",
+            "prompt_tokens": 656,
+            "completion_tokens": 120,
+            "total_tokens": 776
+          },
+          {
+            "seq": 4,
+            "arm": "multi",
+            "case_id": "case_01",
+            "from": "coverage_worker",
+            "to": "rag_tool",
+            "prompt_tokens": 386,
+            "completion_tokens": 380,
+            "total_tokens": 766
+          },
+          {
+            "seq": 5,
+            "arm": "multi",
+            "case_id": "case_01",
+            "from": "manager",
+            "to": "coverage_worker",
+            "prompt_tokens": 1030,
+            "completion_tokens": 600,
+            "total_tokens": 1630
+          },
+          {
+            "seq": 6,
+            "arm": "multi",
+            "case_id": "case_01",
+            "from": "manager",
+            "to": "synthesis",
+            "prompt_tokens": 959,
+            "completion_tokens": 792,
+            "total_tokens": 1751
+          }
+        ],
+        "events": [
+          "plan={'intent': 'claim_question', 'coverage_question': 'Is a claim for water damage automatically covered, or does exclusion E-17 need to be checked first?', 'claim_id': None}"
+        ],
+        "verdict": "PASS",
+        "judge_reason": "The answer correctly states that E\u201117 must be checked first and includes the HO\u20112306 conditions for seepage under 30 days with a vacancy limit of 60 consecutive days."
+      },
+      {
+        "case_id": "case_02",
+        "question": "Does exclusion E-17 apply under form HO-0304 edition 03-24 if a pipe seeps for three weeks?",
+        "mode": "multi",
+        "answer": "**Short answer:**  \nYes \u2013 the loss would fall under the *E\u201117* exclusion because the leak lasted longer than 14\u202fdays. However, the policy also contains an endorsement that *covers* leaks that last fewer than 30\u202fdays **provided the dwelling was not vacant or unoccupied for more than 60 consecutive days during the policy period**.  \n\nSo for a pipe that has been seeping for **three weeks (\u2248\u202f21\u202fdays)**:\n\n| Item | What the policy says | How it applies to a 3\u2011week leak |\n|------|----------------------|---------------------------------|\n| **E\u201117 Exclusion** | \u201cLoss or damage caused by a leak that has been present for more than **14\u202fdays** (continuous seepage or leakage from a pipe, pipe fitting, or other plumbing fixture).\u201d | The leak is **>\u202f14\u202fdays**, so the exclusion would normally apply. |\n| **Endorsement (covering short\u2011term leaks)** | \u201cSeepage or leakage lasting fewer than **30\u202fdays** is covered, provided the dwelling was **not vacant or unoccupied for more than 60 consecutive days** during the policy period.\u201d | The leak is **<\u202f30\u202fdays**, so the endorsement *covers* it **if** the occupancy condition is met. |\n| **Occupancy condition** | Dwelling must **not** have been vacant or unoccupied for **>\u202f60 consecutive days** during the policy period. | If the dwelling was occupied (or vacant for \u2264\u202f60\u202fdays), the endorsement overrides the exclusion and the loss is covered. If the dwelling was vacant for >\u202f60\u202fdays, the exclusion stands and the loss is excluded. |\n\n**Bottom line:**  \n- **Covered** under the endorsement **only if** the dwelling was not vacant for more than 60 consecutive days during the policy period.  \n- **Excluded** under E\u201117 if the dwelling was vacant for >\u202f60 days (or if the endorsement does not apply for any other reason).  \n\nIf you need to confirm the actual occupancy status for the policy period in question, that will determine whether the loss is ultimately covered or excluded.",
+        "latency": 41.697041749954224,
+        "total_tokens": 5962,
+        "cost": 0.005504,
+        "hops": [
+          {
+            "seq": 1,
+            "arm": "multi",
+            "case_id": "case_02",
+            "from": "user",
+            "to": "manager_router",
+            "prompt_tokens": 252,
+            "completion_tokens": 162,
+            "total_tokens": 414
+          },
+          {
+            "seq": 2,
+            "arm": "multi",
+            "case_id": "case_02",
+            "from": "manager",
+            "to": "notes_worker",
+            "prompt_tokens": 321,
+            "completion_tokens": 600,
+            "total_tokens": 921
+          },
+          {
+            "seq": 3,
+            "arm": "multi",
+            "case_id": "case_02",
+            "from": "manager",
+            "to": "coverage_worker",
+            "prompt_tokens": 660,
+            "completion_tokens": 59,
+            "total_tokens": 719
+          },
+          {
+            "seq": 4,
+            "arm": "multi",
+            "case_id": "case_02",
+            "from": "coverage_worker",
+            "to": "rag_tool",
+            "prompt_tokens": 374,
+            "completion_tokens": 501,
+            "total_tokens": 875
+          },
+          {
+            "seq": 5,
+            "arm": "multi",
+            "case_id": "case_02",
+            "from": "manager",
+            "to": "coverage_worker",
+            "prompt_tokens": 845,
+            "completion_tokens": 600,
+            "total_tokens": 1445
+          },
+          {
+            "seq": 6,
+            "arm": "multi",
+            "case_id": "case_02",
+            "from": "manager",
+            "to": "synthesis",
+            "prompt_tokens": 987,
+            "completion_tokens": 601,
+            "total_tokens": 1588
+          }
+        ],
+        "events": [
+          "plan={'intent': 'claim_question', 'coverage_question': 'Does exclusion E-17 apply under form HO-0304 edition 03-24 if a pipe seeps for three weeks?', 'claim_id': None}"
+        ],
+        "verdict": "PASS",
+        "judge_reason": "The answer correctly states that E\u201117 applies because the leak exceeds the 14\u2011day threshold, and it includes the necessary threshold condition from the ground truth."
+      },
+      {
+        "case_id": "case_03",
+        "question": "How is a covered dwelling loss settled - replacement cost or actual cash value?",
+        "mode": "multi",
+        "answer": "**How a Covered Dwelling Loss Is Settled**\n\n| What the insurer pays | How it\u2019s calculated | Key policy conditions |\n|-----------------------|---------------------|-----------------------|\n| **Replacement\u2011Cost (RC)** | The amount needed to rebuild or replace the damaged structure with new materials of similar quality, **without deducting depreciation**. | \u2022 The policy must state \u201creplacement\u2011cost\u201d (or \u201creplacement\u2011cost with no deductible\u201d). <br>\u2022 The Coverage\u202fA limit must be **at least 80\u202f% of the full replacement cost** of the dwelling. <br>\u2022 The deductible is applied to the RC estimate. |\n| **Actual\u2011Cash\u2011Value (ACV)** | The cost to replace the structure **minus depreciation** (i.e., the value of the building at the time of loss). | \u2022 ACV is **not the default** for dwelling losses. <br>\u2022 It is only used if the policy contains an ACV clause or rider for the dwelling. <br>\u2022 If the policy allows ACV and the loss is not covered under RC, the insurer may pay ACV instead. |\n\n### Practical take\u2011away\n\n- **Standard homeowners\u2019 policies** pay the dwelling loss on a **replacement\u2011cost basis**.  \n- The insurer will estimate the rebuild cost based on current construction prices, then subtract the deductible.  \n- If the policy\u2019s Coverage\u202fA limit is less than 80\u202f% of the replacement cost, the insurer will pay only up to that limit.  \n- **Actual\u2011cash\u2011value** coverage for the dwelling is rare and would only apply if the policy explicitly provides it. Otherwise, the policyholder would need to purchase an ACV rider or cover the depreciation gap themselves.\n\nSo, unless your policy specifically lists an ACV rider for the dwelling, a covered dwelling loss is settled on a **replacement\u2011cost basis** subject to the 80\u202f% limit and the applicable deductible.",
+        "latency": 39.65668487548828,
+        "total_tokens": 5160,
+        "cost": 0.004217,
+        "hops": [
+          {
+            "seq": 1,
+            "arm": "multi",
+            "case_id": "case_03",
+            "from": "user",
+            "to": "manager_router",
+            "prompt_tokens": 241,
+            "completion_tokens": 144,
+            "total_tokens": 385
+          },
+          {
+            "seq": 2,
+            "arm": "multi",
+            "case_id": "case_03",
+            "from": "manager",
+            "to": "notes_worker",
+            "prompt_tokens": 310,
+            "completion_tokens": 600,
+            "total_tokens": 910
+          },
+          {
+            "seq": 3,
+            "arm": "multi",
+            "case_id": "case_03",
+            "from": "manager",
+            "to": "coverage_worker",
+            "prompt_tokens": 814,
+            "completion_tokens": 57,
+            "total_tokens": 871
+          },
+          {
+            "seq": 4,
+            "arm": "multi",
+            "case_id": "case_03",
+            "from": "coverage_worker",
+            "to": "rag_tool",
+            "prompt_tokens": 348,
+            "completion_tokens": 206,
+            "total_tokens": 554
+          },
+          {
+            "seq": 5,
+            "arm": "multi",
+            "case_id": "case_03",
+            "from": "manager",
+            "to": "coverage_worker",
+            "prompt_tokens": 951,
+            "completion_tokens": 119,
+            "total_tokens": 1070
+          },
+          {
+            "seq": 6,
+            "arm": "multi",
+            "case_id": "case_03",
+            "from": "manager",
+            "to": "synthesis",
+            "prompt_tokens": 859,
+            "completion_tokens": 511,
+            "total_tokens": 1370
+          }
+        ],
+        "events": [
+          "plan={'intent': 'claim_question', 'coverage_question': 'How is a covered dwelling loss settled - replacement cost or actual cash value?', 'claim_id': None}"
+        ],
+        "verdict": "PASS",
+        "judge_reason": "The answer correctly states that a covered dwelling loss is settled on a replacement\u2011cost basis when Coverage\u202fA is at least 80% of full replacement cost, and it includes the required 80% threshold."
+      },
+      {
+        "case_id": "case_04",
+        "question": "Does exclusion E-17 apply if the leak was discovered after 12 days?",
+        "mode": "multi",
+        "answer": "**Answer**\n\nAccording to the policy endorsement that modifies exclusion\u202fE\u201117 (HO\u20112306):\n\n| Item | Detail |\n|------|--------|\n| **Original E\u201117** | Excludes water damage from continuous seepage or leakage lasting **14\u202f+ days** (including mold/rot). |\n| **HO\u20112306 amendment** | Extends coverage to losses from seepage or leakage lasting **fewer than 30 days**. |\n| **Condition** | The dwelling must **not have been vacant or unoccupied for more than 60 consecutive days** during the policy period. |\n| **Leakage duration in this case** | 12 days of continuous seepage, discovered after 12 days. |\n\n**Bottom line:**  \nExclusion\u202fE\u201117 **does not apply** to a leak that has been seeping for 12 days, **provided** the dwelling was occupied (or vacant for \u2264\u202f60 consecutive days) during the policy period.  \n\n---\n\n### What we still need to confirm\n\n* **Claim details** \u2013 I don\u2019t have the claim ID or specific claim records, so I can\u2019t verify the exact dates of vacancy or occupancy.  \n* **Policy status** \u2013 Ensure that the endorsement HO\u20112306 is in force on the policy in question.\n\nOnce those details are confirmed, the loss should be covered under the amended policy. If the dwelling was vacant for more than 60 consecutive days, the exclusion could still apply.",
+        "latency": 30.500340938568115,
+        "total_tokens": 4212,
+        "cost": 0.003796,
+        "hops": [
+          {
+            "seq": 1,
+            "arm": "multi",
+            "case_id": "case_04",
+            "from": "user",
+            "to": "manager_router",
+            "prompt_tokens": 242,
+            "completion_tokens": 140,
+            "total_tokens": 382
+          },
+          {
+            "seq": 2,
+            "arm": "multi",
+            "case_id": "case_04",
+            "from": "manager",
+            "to": "notes_worker",
+            "prompt_tokens": 311,
+            "completion_tokens": 193,
+            "total_tokens": 504
+          },
+          {
+            "seq": 3,
+            "arm": "multi",
+            "case_id": "case_04",
+            "from": "manager",
+            "to": "coverage_worker",
+            "prompt_tokens": 376,
+            "completion_tokens": 74,
+            "total_tokens": 450
+          },
+          {
+            "seq": 4,
+            "arm": "multi",
+            "case_id": "case_04",
+            "from": "coverage_worker",
+            "to": "rag_tool",
+            "prompt_tokens": 389,
+            "completion_tokens": 426,
+            "total_tokens": 815
+          },
+          {
+            "seq": 5,
+            "arm": "multi",
+            "case_id": "case_04",
+            "from": "manager",
+            "to": "coverage_worker",
+            "prompt_tokens": 674,
+            "completion_tokens": 394,
+            "total_tokens": 1068
+          },
+          {
+            "seq": 6,
+            "arm": "multi",
+            "case_id": "case_04",
+            "from": "manager",
+            "to": "synthesis",
+            "prompt_tokens": 530,
+            "completion_tokens": 463,
+            "total_tokens": 993
+          }
+        ],
+        "events": [
+          "plan={'intent': 'claim_question', 'coverage_question': 'Does exclusion E-17 apply if the leak was discovered after 12 days?', 'claim_id': None}"
+        ],
+        "verdict": "PASS",
+        "judge_reason": "The answer correctly states that E\u201117 does not apply for a 12\u2011day leak and includes the threshold from the ground truth, meeting both accuracy and completeness criteria."
+      },
+      {
+        "case_id": "case_05",
+        "question": "Is there a discount for bundling home and auto insurance?",
+        "mode": "multi",
+        "answer": "**Yes \u2013 most insurers offer a bundling discount when you purchase both a home and an auto policy from the same company.**  \nThe discount is usually applied to the renewal premium (not the initial purchase) and varies by insurer, policy mix, and sometimes by the length of time you\u2019ve been with the company.\n\n| Insurer | Typical Bundle Discount | Notes |\n|---------|------------------------|-------|\n| **State Farm** | 10\u202f% | Applies to most policy combinations. |\n| **GEICO** | 10\u202f% | Discount applies after the first year. |\n| **Allstate** | 5\u201310\u202f% | Additional savings if you add a third policy (e.g., renters). |\n| **Progressive** | 10\u202f% | Requires both policies to be active for at least 6\u202fmonths. |\n| **USAA** | 15\u202f% | Highest discount, but only for military members and families. |\n\n### How it works\n1. **Get separate quotes** for your home and auto coverage.  \n2. **Ask for a bundled quote** \u2013 the insurer will calculate the combined premium and apply the discount.  \n3. **Eligibility** \u2013 many insurers require a minimum coverage level or a certain number of years of continuous policy.  \n4. **Renewal** \u2013 the discount is typically applied to the renewal premium; the first\u2011year premium may be quoted at full price.\n\n### Tips to maximize savings\n- **Shop around** \u2013 compare bundled quotes from several insurers; the discount can differ.  \n- **Add other policies** \u2013 renters, life, or umbrella insurance can sometimes boost the discount.  \n- **Keep a clean claims history** \u2013 a good record often qualifies you for higher discounts.  \n- **Ask about loyalty programs** \u2013 some insurers offer extra perks for long\u2011term customers.\n\nIf you\u2019d like the most up\u2011to\u2011date discount details for a specific insurer, just let me know the company name and I can pull the latest information for you.",
+        "latency": 32.17083692550659,
+        "total_tokens": 5320,
+        "cost": 0.004560999999999999,
+        "hops": [
+          {
+            "seq": 1,
+            "arm": "multi",
+            "case_id": "case_05",
+            "from": "user",
+            "to": "manager_router",
+            "prompt_tokens": 238,
+            "completion_tokens": 154,
+            "total_tokens": 392
+          },
+          {
+            "seq": 2,
+            "arm": "multi",
+            "case_id": "case_05",
+            "from": "manager",
+            "to": "notes_worker",
+            "prompt_tokens": 307,
+            "completion_tokens": 481,
+            "total_tokens": 788
+          },
+          {
+            "seq": 3,
+            "arm": "multi",
+            "case_id": "case_05",
+            "from": "manager",
+            "to": "coverage_worker",
+            "prompt_tokens": 709,
+            "completion_tokens": 464,
+            "total_tokens": 1173
+          },
+          {
+            "seq": 4,
+            "arm": "multi",
+            "case_id": "case_05",
+            "from": "coverage_worker",
+            "to": "rag_tool",
+            "prompt_tokens": 324,
+            "completion_tokens": 203,
+            "total_tokens": 527
+          },
+          {
+            "seq": 5,
+            "arm": "multi",
+            "case_id": "case_05",
+            "from": "manager",
+            "to": "coverage_worker",
+            "prompt_tokens": 1192,
+            "completion_tokens": 44,
+            "total_tokens": 1236
+          },
+          {
+            "seq": 6,
+            "arm": "multi",
+            "case_id": "case_05",
+            "from": "manager",
+            "to": "synthesis",
+            "prompt_tokens": 649,
+            "completion_tokens": 555,
+            "total_tokens": 1204
+          }
+        ],
+        "events": [
+          "plan={'intent': 'claim_question', 'coverage_question': 'Is there a discount for bundling home and auto insurance?', 'claim_id': None}"
+        ],
+        "verdict": "FAIL",
+        "judge_reason": "Assertion failed: out_of_corpus_not_deflected"
+      },
+      {
+        "case_id": "case_06",
+        "question": "Is mold damage covered if it results from a covered water loss?",
+        "mode": "multi",
+        "answer": "**Short answer:**  \nMold damage is covered **only** when it is caused by a *sudden, accidental* water loss that lasts **fewer than 30 days** and the dwelling has not been vacant for more than 60 consecutive days during the policy period. If the water loss is continuous for 14 days or more (or exceeds the 30\u2011day limit), the mold damage is excluded.\n\n---\n\n### Coverage details\n\n| Condition | Coverage status | Notes |\n|-----------|-----------------|-------|\n| **Type of water loss** \u2013 sudden, accidental discharge or overflow of water or steam (e.g., from plumbing, heating, air\u2011conditioning, or a household appliance) | **Covered** | The mold is treated as part of the direct physical loss. |\n| **Duration of seepage** \u2013 total time water/steam is present | **Covered** if <\u202f30\u202fdays | Must be a *sudden* event; the 30\u2011day limit is a hard cap. |\n| **Continuous seepage** \u2013 water/steam that persists for 14\u202fdays or more | **Excluded** | Any mold or rot that develops from such prolonged seepage is not covered. |\n| **Vacancy rule** \u2013 dwelling must not have been vacant or unoccupied for more than 60 consecutive days during the policy period | **Required** for the 30\u2011day seepage coverage to apply | If the home was vacant >\u202f60\u202fdays, the 30\u2011day rule does not apply and mold is excluded. |\n\n---\n\n### What to do next\n\n1. **Verify the claim details** \u2013 If you have a claim ID or other identifying information, let me pull the specific inspection notes and loss history.  \n2. **Check the water\u2011loss event** \u2013 Confirm it was sudden/accidental and that the total duration of water/steam exposure was <\u202f30\u202fdays.  \n3. **Confirm vacancy status** \u2013 Ensure the dwelling was not vacant for >\u202f60 consecutive days during the policy period.  \n\nIf all these conditions are met, the mold damage will be covered under the policy. If any condition fails (e.g., prolonged seepage, vacancy >\u202f60\u202fdays, or the water loss was not sudden/accidental), the mold damage is excluded.",
+        "latency": 37.56647229194641,
+        "total_tokens": 5016,
+        "cost": 0.004826,
+        "hops": [
+          {
+            "seq": 1,
+            "arm": "multi",
+            "case_id": "case_06",
+            "from": "user",
+            "to": "manager_router",
+            "prompt_tokens": 239,
+            "completion_tokens": 121,
+            "total_tokens": 360
+          },
+          {
+            "seq": 2,
+            "arm": "multi",
+            "case_id": "case_06",
+            "from": "manager",
+            "to": "notes_worker",
+            "prompt_tokens": 308,
+            "completion_tokens": 468,
+            "total_tokens": 776
+          },
+          {
+            "seq": 3,
+            "arm": "multi",
+            "case_id": "case_06",
+            "from": "manager",
+            "to": "coverage_worker",
+            "prompt_tokens": 398,
+            "completion_tokens": 65,
+            "total_tokens": 463
+          },
+          {
+            "seq": 4,
+            "arm": "multi",
+            "case_id": "case_06",
+            "from": "coverage_worker",
+            "to": "rag_tool",
+            "prompt_tokens": 420,
+            "completion_tokens": 627,
+            "total_tokens": 1047
+          },
+          {
+            "seq": 5,
+            "arm": "multi",
+            "case_id": "case_06",
+            "from": "manager",
+            "to": "coverage_worker",
+            "prompt_tokens": 720,
+            "completion_tokens": 456,
+            "total_tokens": 1176
+          },
+          {
+            "seq": 6,
+            "arm": "multi",
+            "case_id": "case_06",
+            "from": "manager",
+            "to": "synthesis",
+            "prompt_tokens": 613,
+            "completion_tokens": 581,
+            "total_tokens": 1194
+          }
+        ],
+        "events": [
+          "plan={'intent': 'claim_question', 'coverage_question': 'Is mold damage covered if it results from a covered water loss?', 'claim_id': None}"
+        ],
+        "verdict": "FAIL",
+        "judge_reason": "The answer incorrectly states a 30\u2011day limit for coverage, whereas the policy specifies a 14\u2011day threshold for continuous seepage, making the direction inaccurate."
+      },
+      {
+        "case_id": "case_07",
+        "question": "If the dwelling was vacant for 90 days and there is a 20-day seepage loss, does endorsement HO-2306 cover it?",
+        "mode": "multi",
+        "answer": "**Answer**\n\nBased on the information supplied by the two specialists, there is a conflict in how the HO\u20112306 \u201cDwelling Vacancy Endorsement\u201d is interpreted.  \nBelow is a side\u2011by\u2011side summary of the two positions, followed by a recommendation for what to do next.\n\n| Aspect | Notes\u2011Worker\u2019s Interpretation | Coverage\u2011Worker\u2019s Interpretation |\n|--------|------------------------------|----------------------------------|\n| **Trigger for coverage** | Seepage losses that **occur after the dwelling has been vacant for 90\u202fdays or more**. | Seepage losses that **occur while the dwelling is vacant for 60\u202fdays or fewer** (i.e., the dwelling must **not** have been vacant for more than 60 consecutive days during the policy period). |\n| **Duration of seepage loss** | 20\u202fdays \u2013 \u201cfewer than 30\u202fdays\u201d is not a stated limit. | Must be **<\u202f30\u202fdays**; 20\u202fdays satisfies this part. |\n| **Vacancy period at loss onset** | 90\u202fdays \u2013 meets the 90\u2011day trigger. | 90\u202fdays \u2013 exceeds the 60\u2011day maximum, so the loss **does not trigger** coverage. |\n| **Result** | Covered, provided the policy actually contains HO\u20112306 and all other conditions (deductible, limits, exclusions) are met. | Not covered, because the dwelling was vacant for more than 60\u202fdays, which is outside the endorsement\u2019s coverage window. |\n\n---\n\n### What this means for the claim\n\n1. **If the policy truly contains HO\u20112306** and the endorsement\u2019s wording is as the coverage\u2011worker states (vacancy \u2264\u202f60\u202fdays), the loss would **not be covered** because the dwelling was vacant for 90\u202fdays.\n\n2. **If the endorsement\u2019s wording is as the notes\u2011worker states** (vacancy \u2265\u202f90\u202fdays triggers coverage), then the loss would **be covered** (the 20\u2011day seepage falls within the \u201c<\u202f30\u202fdays\u201d limit).\n\nBecause the two interpretations are mutually exclusive, the only way to resolve the issue is to look at the **actual policy language** for HO\u20112306 on the insured\u2019s policy. The wording in the policy will determine whether the 90\u2011day vacancy period triggers coverage or whether the 60\u2011day maximum vacancy rule applies.\n\n---\n\n### Next steps\n\n1. **Locate the policy** (or the endorsement text) for the insured.  \n2. **Verify the exact trigger language** for HO\u20112306 \u2013 does it say \u201cvacant for 90\u202fdays or more\u201d or \u201cvacant for no more than 60\u202fdays\u201d?  \n3. **Confirm the deductible, limits, and any exclusions** that apply to seepage losses under this endorsement.  \n4. Once the wording is confirmed, you can definitively state whether the 20\u2011day seepage loss in a 90\u2011day vacant dwelling is covered.\n\nUntil the policy wording is checked, we cannot give a definitive yes or no. However, based on the coverage\u2011worker\u2019s interpretation (which is consistent with most HO\u20112306 endorsements in our database), the loss **would not be covered** because the dwelling was vacant for more than 60 consecutive days.",
+        "latency": 35.461726665496826,
+        "total_tokens": 5197,
+        "cost": 0.0048614999999999995,
+        "hops": [
+          {
+            "seq": 1,
+            "arm": "multi",
+            "case_id": "case_07",
+            "from": "user",
+            "to": "manager_router",
+            "prompt_tokens": 255,
+            "completion_tokens": 202,
+            "total_tokens": 457
+          },
+          {
+            "seq": 2,
+            "arm": "multi",
+            "case_id": "case_07",
+            "from": "manager",
+            "to": "notes_worker",
+            "prompt_tokens": 324,
+            "completion_tokens": 600,
+            "total_tokens": 924
+          },
+          {
+            "seq": 3,
+            "arm": "multi",
+            "case_id": "case_07",
+            "from": "manager",
+            "to": "coverage_worker",
+            "prompt_tokens": 578,
+            "completion_tokens": 63,
+            "total_tokens": 641
+          },
+          {
+            "seq": 4,
+            "arm": "multi",
+            "case_id": "case_07",
+            "from": "coverage_worker",
+            "to": "rag_tool",
+            "prompt_tokens": 393,
+            "completion_tokens": 333,
+            "total_tokens": 726
+          },
+          {
+            "seq": 5,
+            "arm": "multi",
+            "case_id": "case_07",
+            "from": "manager",
+            "to": "coverage_worker",
+            "prompt_tokens": 742,
+            "completion_tokens": 138,
+            "total_tokens": 880
+          },
+          {
+            "seq": 6,
+            "arm": "multi",
+            "case_id": "case_07",
+            "from": "manager",
+            "to": "synthesis",
+            "prompt_tokens": 642,
+            "completion_tokens": 927,
+            "total_tokens": 1569
+          }
+        ],
+        "events": [
+          "plan={'intent': 'claim_question', 'coverage_question': 'If the dwelling was vacant for 90 days and there is a 20-day seepage loss, does endorsement HO-2306 cover it?', 'claim_id': None}"
+        ],
+        "verdict": "FAIL",
+        "judge_reason": "The answer is ambiguous and does not give a definitive \u201cno\u201d as required by the policy; it incorrectly presents a conditional scenario that contradicts the ground truth."
+      },
+      {
+        "case_id": "case_08",
+        "question": "Does this policy cover auto accidents?",
+        "mode": "multi",
+        "answer": "I\u2019m not able to determine whether the policy covers auto accidents because I don\u2019t have the policy details. Could you please provide the policy number or any other identifying information (e.g., the policyholder\u2019s name, effective dates, or a policy reference number) so I can look up the relevant coverage?",
+        "latency": 13.176404237747192,
+        "total_tokens": 1768,
+        "cost": 0.0014650000000000002,
+        "hops": [
+          {
+            "seq": 1,
+            "arm": "multi",
+            "case_id": "case_08",
+            "from": "user",
+            "to": "manager_router",
+            "prompt_tokens": 233,
+            "completion_tokens": 102,
+            "total_tokens": 335
+          },
+          {
+            "seq": 2,
+            "arm": "multi",
+            "case_id": "case_08",
+            "from": "manager",
+            "to": "notes_worker",
+            "prompt_tokens": 302,
+            "completion_tokens": 205,
+            "total_tokens": 507
+          },
+          {
+            "seq": 3,
+            "arm": "multi",
+            "case_id": "case_08",
+            "from": "manager",
+            "to": "coverage_worker",
+            "prompt_tokens": 356,
+            "completion_tokens": 103,
+            "total_tokens": 459
+          },
+          {
+            "seq": 4,
+            "arm": "multi",
+            "case_id": "case_08",
+            "from": "manager",
+            "to": "synthesis",
+            "prompt_tokens": 296,
+            "completion_tokens": 171,
+            "total_tokens": 467
+          }
+        ],
+        "events": [
+          "plan={'intent': 'claim_question', 'coverage_question': 'Does this policy cover auto accidents?', 'claim_id': None}"
+        ],
+        "verdict": "FAIL",
+        "judge_reason": "Assertion failed: out_of_corpus_not_deflected"
+      },
+      {
+        "case_id": "case_09",
+        "question": "Does endorsement HO-2306 change how exclusion E-17 applies?",
+        "mode": "multi",
+        "answer": "**Short answer:**  \nYes \u2013 HO\u20112306 *adds* a specific exception to the E\u201117 exclusion, but it does **not** eliminate the exclusion entirely. The endorsement only covers seepage or leakage of water or steam that is **continuous or repeated for fewer than 30 days** and that occurs in a dwelling that has **not been vacant or unoccupied for more than 60 consecutive days** during the policy period. For all other situations that E\u201117 normally excludes (e.g., seepage lasting \u2265\u202f30\u202fdays, seepage in a dwelling that has been vacant >\u202f60\u202fdays, etc.), the exclusion remains in force.\n\n---\n\n### How the endorsement modifies E\u201117\n\n| Item | Detail |\n|------|--------|\n| **Policy form** | Homeowners Form\u202fHO\u20110304 (E\u201117 \u2013 \u201cWater Damage, Continuous or Repeated Seepage\u201d) |\n| **Core E\u201117 exclusion** | Loss by seepage or leakage of water or steam is excluded. |\n| **HO\u20112306 amendment** | Adds coverage for seepage or leakage of water or steam **only when**:<br>\u2022 The seepage is continuous or repeated for **<\u202f30\u202fdays**.<br>\u2022 The dwelling has **not been vacant or unoccupied for more than 60 consecutive days** during the policy period. |\n| **Coverage limits** | No separate sub\u2011limit is specified; the coverage applies under the policy\u2019s general limits for water damage. |\n| **Other terms** | All other terms, conditions, and exclusions of Form\u202fHO\u20110304 remain unchanged. |\n| **Exclusion remains** | E\u201117 still applies to seepage or leakage that lasts **\u2265\u202f30\u202fdays**, seepage in a dwelling that has been vacant >\u202f60 days, and any other perils not expressly covered by HO\u20112306. |\n\n---\n\n### Bottom line\n\n- **HO\u20112306 does not remove E\u201117**; it simply creates a narrow carve\u2011out for short\u2011duration seepage/steam loss in a non\u2011vacant dwelling.  \n- For any seepage or leakage that does **not** meet the <30\u2011day and <60\u2011day vacancy conditions, the loss is still excluded under E\u201117.  \n- The endorsement does not alter other exclusions or the policy\u2019s overall limits.",
+        "latency": 45.671907901763916,
+        "total_tokens": 6948,
+        "cost": 0.0067800000000000004,
+        "hops": [
+          {
+            "seq": 1,
+            "arm": "multi",
+            "case_id": "case_09",
+            "from": "user",
+            "to": "manager_router",
+            "prompt_tokens": 240,
+            "completion_tokens": 152,
+            "total_tokens": 392
+          },
+          {
+            "seq": 2,
+            "arm": "multi",
+            "case_id": "case_09",
+            "from": "manager",
+            "to": "notes_worker",
+            "prompt_tokens": 309,
+            "completion_tokens": 600,
+            "total_tokens": 909
+          },
+          {
+            "seq": 3,
+            "arm": "multi",
+            "case_id": "case_09",
+            "from": "manager",
+            "to": "coverage_worker",
+            "prompt_tokens": 700,
+            "completion_tokens": 121,
+            "total_tokens": 821
+          },
+          {
+            "seq": 4,
+            "arm": "multi",
+            "case_id": "case_09",
+            "from": "coverage_worker",
+            "to": "rag_tool",
+            "prompt_tokens": 389,
+            "completion_tokens": 371,
+            "total_tokens": 760
+          },
+          {
+            "seq": 5,
+            "arm": "multi",
+            "case_id": "case_09",
+            "from": "manager",
+            "to": "coverage_worker",
+            "prompt_tokens": 994,
+            "completion_tokens": 594,
+            "total_tokens": 1588
+          },
+          {
+            "seq": 6,
+            "arm": "multi",
+            "case_id": "case_09",
+            "from": "manager",
+            "to": "synthesis",
+            "prompt_tokens": 1010,
+            "completion_tokens": 1468,
+            "total_tokens": 2478
+          }
+        ],
+        "events": [
+          "plan={'intent': 'claim_question', 'coverage_question': 'Does endorsement HO-2306 change how exclusion E-17 applies?', 'claim_id': None}"
+        ],
+        "verdict": "PASS",
+        "judge_reason": "The answer correctly states that HO\u20112306 adds a carve\u2011out for seepage under 30 days in a dwelling not vacant for more than 60 consecutive days, covering all critical conditions."
+      },
+      {
+        "case_id": "case_10",
+        "question": "What are the claimant's duties after a loss?",
+        "mode": "multi",
+        "answer": "**Claimant\u2019s Duties After a Loss**  \n(These duties are required by most homeowners policies and are also listed in the policy\u2019s Coverage\u202fC and Coverage\u202fA provisions.)\n\n| # | Duty | Why It Matters | Practical Steps |\n|---|------|----------------|-----------------|\n| **1. Report the loss promptly** | Most policies require a timely notification (often within 24\u201348\u202fhrs). Late reporting can delay or even void coverage. | \u2022 Call the insurer\u2019s claims line or use the online portal.<br>\u2022 Provide the claim reference number (if you already have one) and a brief description of the incident. |\n| **2. Provide accurate, complete information** | Inaccurate or incomplete details can lead to disputes or claim denial. | \u2022 Give the date, time, and location of the loss.<br>\u2022 Identify all parties involved (e.g., other drivers, witnesses).<br>\u2022 Supply any police or incident reports. |\n| **3. Preserve the loss scene** | Evidence can be crucial for investigation and settlement. | \u2022 Do not alter or clean up the scene before the adjuster arrives.<br>\u2022 Keep any damaged property in its original state (or as close to it as possible). |\n| **4. Submit required documentation** | Insurers need evidence to assess the claim. | \u2022 Photographs or videos of damage.<br>\u2022 Receipts, invoices, or estimates for repairs.<br>\u2022 Medical records if the loss involved injuries.<br>\u2022 Any relevant correspondence (e.g., from a repair shop). |\n| **5. Cooperate with the adjuster** | Cooperation speeds up the process and can improve settlement outcomes. | \u2022 Attend any scheduled inspections or meetings.<br>\u2022 Answer questions truthfully and promptly.<br>\u2022 Provide access to the property or vehicle if requested. |\n| **6. Keep a detailed record** | A log of all communications and documents helps you track progress and resolve disputes. | \u2022 Note dates, times, and names of people you speak with.<br>\u2022 Store copies of all emails, letters, and receipts in a dedicated folder. |\n| **7. Follow policy terms and conditions** | Violating policy conditions can lead to denial or reduced payment. | \u2022 Review your policy for any exclusions, deductibles, or special requirements (e.g., \u201cno self\u2011repair\u201d clauses). |\n| **8. Maintain the property/vehicle** | Proper maintenance can prevent additional damage and may be required for coverage. | \u2022 Keep the vehicle in a safe, secure location.<br>\u2022 If the dwelling is vacant, ensure it is not unoccupied for more than 60 consecutive days (policy\u2011specific requirement for seepage/steam losses). |\n\n### Key Policy\u2011Specific Requirements (from Coverage\u202fC & Coverage\u202fA)\n\n| Requirement | Policy Condition | Practical Implication |\n|-------------|------------------|-----------------------|\n| **Prompt notification** | Must be made **immediately** after the loss. | Report within 24\u201348\u202fhrs to avoid delay or voiding of coverage. |\n| **Preservation of loss scene** | Insured must take reasonable steps to prevent further damage. | Do not clean, repair, or alter the scene before the insurer\u2019s inspection. |\n| **Cooperation** | Insured must cooperate with the insurer\u2019s investigation. | Provide access, answer questions, and supply requested documents. |\n| **Coverage limits** | Dwelling loss is paid at replacement cost, but only if the Coverage\u202fA limit is \u2265\u202f80\u202f% of the full replacement cost. | Verify your policy limit meets this threshold. |\n| **Seepage/Leakage** | Covered only if the dwelling was not vacant for >\u202f60 consecutive days and the loss lasted <\u202f30 days. | If your dwelling was vacant, this coverage may not apply. |\n\n---\n\n**Bottom line:**  \nAfter a loss, you must **report promptly, preserve the scene, provide complete and accurate information, submit all required documentation, cooperate fully with the insurer, keep detailed records, and adhere to the specific terms of your policy**. These steps ensure the claim proceeds smoothly and that you receive the coverage you are entitled to.",
+        "latency": 48.20067477226257,
+        "total_tokens": 7391,
+        "cost": 0.006734499999999999,
+        "hops": [
+          {
+            "seq": 1,
+            "arm": "multi",
+            "case_id": "case_10",
+            "from": "user",
+            "to": "manager_router",
+            "prompt_tokens": 236,
+            "completion_tokens": 139,
+            "total_tokens": 375
+          },
+          {
+            "seq": 2,
+            "arm": "multi",
+            "case_id": "case_10",
+            "from": "manager",
+            "to": "notes_worker",
+            "prompt_tokens": 305,
+            "completion_tokens": 600,
+            "total_tokens": 905
+          },
+          {
+            "seq": 3,
+            "arm": "multi",
+            "case_id": "case_10",
+            "from": "manager",
+            "to": "coverage_worker",
+            "prompt_tokens": 823,
+            "completion_tokens": 146,
+            "total_tokens": 969
+          },
+          {
+            "seq": 4,
+            "arm": "multi",
+            "case_id": "case_10",
+            "from": "coverage_worker",
+            "to": "rag_tool",
+            "prompt_tokens": 384,
+            "completion_tokens": 568,
+            "total_tokens": 952
+          },
+          {
+            "seq": 5,
+            "arm": "multi",
+            "case_id": "case_10",
+            "from": "manager",
+            "to": "coverage_worker",
+            "prompt_tokens": 1419,
+            "completion_tokens": 600,
+            "total_tokens": 2019
+          },
+          {
+            "seq": 6,
+            "arm": "multi",
+            "case_id": "case_10",
+            "from": "manager",
+            "to": "synthesis",
+            "prompt_tokens": 1185,
+            "completion_tokens": 986,
+            "total_tokens": 2171
+          }
+        ],
+        "events": [
+          "plan={'intent': 'claim_question', 'coverage_question': \"What are the claimant's duties after a loss?\", 'claim_id': None}"
+        ],
+        "verdict": "PASS",
+        "judge_reason": "The answer correctly states prompt notice, protection of the property, and cooperation, and it includes all required duties from the ground truth."
+      }
+    ]
+  },
+  "failure": {
+    "mode": "multi",
+    "answer": "**Answer**\n\nYes\u2014if the dwelling was truly vacant for **90 consecutive days** before the seepage loss began, the HO\u20112306 Vacancy Endorsement would cover a seepage loss that lasts 20\u202fdays (or that occurs during that 20\u2011day period).  \n\n**Key points to keep in mind**\n\n| Condition | What it means for your claim |\n|-----------|------------------------------|\n| **90\u2011day vacancy requirement** | The endorsement only becomes effective after the dwelling has been vacant for 90 consecutive days. If the dwelling was vacant for fewer days, the endorsement would not apply. |\n| **Loss must be caused by seepage** | The loss must be due to water infiltration (e.g., from a pipe, well, or other seepage source). Other causes such as flooding, wind, or fire are not covered by this endorsement. |\n| **Timing of the loss** | The seepage loss must occur **after** the 90\u2011day vacancy period. A loss that began before the vacancy period would not be covered. |\n| **Reporting** | The loss must be reported within the policy period and in accordance with the policy\u2019s reporting requirements. |\n| **Limits & exclusions** | The endorsement is subject to the policy\u2019s overall limits and any specific exclusions that apply to seepage losses (e.g., losses caused by a broken pipe that was not properly maintained). The typical policy limit for seepage losses under HO\u20112306 is the same as the policy\u2019s standard dwelling coverage limit, but you should verify the exact limit and any sub\u2011limits in the policy. |\n\n**Bottom line**\n\n- **If** the dwelling was vacant for 90 consecutive days **and** the 20\u2011day seepage loss began after that vacancy period, the HO\u20112306 endorsement will cover the loss (subject to the policy\u2019s limits and exclusions).  \n- **If** either the vacancy period was shorter than 90 days or the loss began before the vacancy period, the endorsement would not apply.  \n\nPlease review the specific policy language for any additional exclusions or sub\u2011limits that might affect this coverage.",
+    "latency": 15.308464527130127,
+    "total_tokens": 2721,
+    "cost": 0.0031195,
+    "hops": [
+      {
+        "seq": 1,
+        "arm": "multi",
+        "case_id": "case_07",
+        "from": "user",
+        "to": "manager_router",
+        "prompt_tokens": 255,
+        "completion_tokens": 170,
+        "total_tokens": 425
+      },
+      {
+        "seq": 2,
+        "arm": "multi",
+        "case_id": "case_07",
+        "from": "manager",
+        "to": "notes_worker",
+        "prompt_tokens": 324,
+        "completion_tokens": 600,
+        "total_tokens": 924
+      },
+      {
+        "seq": 3,
+        "arm": "multi",
+        "case_id": "case_07",
+        "from": "manager",
+        "to": "synthesis",
+        "prompt_tokens": 383,
+        "completion_tokens": 989,
+        "total_tokens": 1372
+      }
+    ],
+    "events": [
+      "plan={'intent': 'claim_question', 'coverage_question': 'If the dwelling was vacant for 90 days and there is a 20-day seepage loss, does endorsement HO-2306 cover it?', 'claim_id': None}"
+    ]
+  }
+}

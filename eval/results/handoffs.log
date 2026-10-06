@@ -1,0 +1,108 @@
+# one line per hand-off (= one LLM call). prompt_tokens is the context re-sent on that hop.
+arm | case | seq | from -> to | prompt | completion | total
+single | case_01 | 1 | user -> single_agent | 379 | 96 | 475
+single | case_01 | 2 | single_agent -> rag_tool | 386 | 309 | 695
+single | case_01 | 3 | user -> single_agent | 660 | 376 | 1036
+single | case_02 | 1 | user -> single_agent | 384 | 103 | 487
+single | case_02 | 2 | single_agent -> rag_tool | 428 | 273 | 701
+single | case_02 | 3 | user -> single_agent | 573 | 342 | 915
+single | case_03 | 1 | user -> single_agent | 373 | 109 | 482
+single | case_03 | 2 | single_agent -> rag_tool | 370 | 432 | 802
+single | case_03 | 3 | user -> single_agent | 680 | 600 | 1280
+single | case_04 | 1 | user -> single_agent | 374 | 41 | 415
+single | case_04 | 2 | single_agent -> rag_tool | 343 | 368 | 711
+single | case_04 | 3 | user -> single_agent | 683 | 391 | 1074
+single | case_05 | 1 | user -> single_agent | 370 | 82 | 452
+single | case_05 | 2 | single_agent -> rag_tool | 323 | 149 | 472
+single | case_05 | 3 | user -> single_agent | 471 | 36 | 507
+single | case_05 | 4 | single_agent -> rag_tool | 274 | 187 | 461
+single | case_05 | 5 | user -> single_agent | 530 | 46 | 576
+single | case_06 | 1 | user -> single_agent | 371 | 50 | 421
+single | case_06 | 2 | single_agent -> rag_tool | 420 | 535 | 955
+single | case_06 | 3 | user -> single_agent | 597 | 173 | 770
+single | case_07 | 1 | user -> single_agent | 387 | 65 | 452
+single | case_07 | 2 | single_agent -> rag_tool | 396 | 281 | 677
+single | case_07 | 3 | user -> single_agent | 578 | 244 | 822
+single | case_08 | 1 | user -> single_agent | 365 | 39 | 404
+single | case_08 | 2 | single_agent -> rag_tool | 334 | 151 | 485
+single | case_08 | 3 | user -> single_agent | 423 | 36 | 459
+single | case_09 | 1 | user -> single_agent | 372 | 53 | 425
+single | case_09 | 2 | single_agent -> rag_tool | 389 | 309 | 698
+single | case_09 | 3 | user -> single_agent | 545 | 344 | 889
+single | case_10 | 1 | user -> single_agent | 368 | 68 | 436
+single | case_10 | 2 | single_agent -> rag_tool | 371 | 168 | 539
+single | case_10 | 3 | user -> single_agent | 487 | 123 | 610
+single | case_10 | 4 | single_agent -> rag_tool | 383 | 266 | 649
+single | case_10 | 5 | user -> single_agent | 719 | 91 | 810
+single | case_10 | 6 | single_agent -> rag_tool | 418 | 178 | 596
+single | case_10 | 7 | user -> single_agent | 832 | 72 | 904
+single | case_10 | 8 | single_agent -> rag_tool | 405 | 290 | 695
+single | case_10 | 9 | user -> single_agent | 960 | 77 | 1037
+single | case_10 | 10 | single_agent -> rag_tool | 408 | 297 | 705
+multi | case_01 | 1 | user -> manager_router | 247 | 145 | 392
+multi | case_01 | 2 | manager -> notes_worker | 316 | 568 | 884
+multi | case_01 | 3 | manager -> coverage_worker | 656 | 120 | 776
+multi | case_01 | 4 | coverage_worker -> rag_tool | 386 | 380 | 766
+multi | case_01 | 5 | manager -> coverage_worker | 1030 | 600 | 1630
+multi | case_01 | 6 | manager -> synthesis | 959 | 792 | 1751
+multi | case_02 | 1 | user -> manager_router | 252 | 162 | 414
+multi | case_02 | 2 | manager -> notes_worker | 321 | 600 | 921
+multi | case_02 | 3 | manager -> coverage_worker | 660 | 59 | 719
+multi | case_02 | 4 | coverage_worker -> rag_tool | 374 | 501 | 875
+multi | case_02 | 5 | manager -> coverage_worker | 845 | 600 | 1445
+multi | case_02 | 6 | manager -> synthesis | 987 | 601 | 1588
+multi | case_03 | 1 | user -> manager_router | 241 | 144 | 385
+multi | case_03 | 2 | manager -> notes_worker | 310 | 600 | 910
+multi | case_03 | 3 | manager -> coverage_worker | 814 | 57 | 871
+multi | case_03 | 4 | coverage_worker -> rag_tool | 348 | 206 | 554
+multi | case_03 | 5 | manager -> coverage_worker | 951 | 119 | 1070
+multi | case_03 | 6 | manager -> synthesis | 859 | 511 | 1370
+multi | case_04 | 1 | user -> manager_router | 242 | 140 | 382
+multi | case_04 | 2 | manager -> notes_worker | 311 | 193 | 504
+multi | case_04 | 3 | manager -> coverage_worker | 376 | 74 | 450
+multi | case_04 | 4 | coverage_worker -> rag_tool | 389 | 426 | 815
+multi | case_04 | 5 | manager -> coverage_worker | 674 | 394 | 1068
+multi | case_04 | 6 | manager -> synthesis | 530 | 463 | 993
+multi | case_05 | 1 | user -> manager_router | 238 | 154 | 392
+multi | case_05 | 2 | manager -> notes_worker | 307 | 481 | 788
+multi | case_05 | 3 | manager -> coverage_worker | 709 | 464 | 1173
+multi | case_05 | 4 | coverage_worker -> rag_tool | 324 | 203 | 527
+multi | case_05 | 5 | manager -> coverage_worker | 1192 | 44 | 1236
+multi | case_05 | 6 | manager -> synthesis | 649 | 555 | 1204
+multi | case_06 | 1 | user -> manager_router | 239 | 121 | 360
+multi | case_06 | 2 | manager -> notes_worker | 308 | 468 | 776
+multi | case_06 | 3 | manager -> coverage_worker | 398 | 65 | 463
+multi | case_06 | 4 | coverage_worker -> rag_tool | 420 | 627 | 1047
+multi | case_06 | 5 | manager -> coverage_worker | 720 | 456 | 1176
+multi | case_06 | 6 | manager -> synthesis | 613 | 581 | 1194
+multi | case_07 | 1 | user -> manager_router | 255 | 202 | 457
+multi | case_07 | 2 | manager -> notes_worker | 324 | 600 | 924
+multi | case_07 | 3 | manager -> coverage_worker | 578 | 63 | 641
+multi | case_07 | 4 | coverage_worker -> rag_tool | 393 | 333 | 726
+multi | case_07 | 5 | manager -> coverage_worker | 742 | 138 | 880
+multi | case_07 | 6 | manager -> synthesis | 642 | 927 | 1569
+multi | case_08 | 1 | user -> manager_router | 233 | 102 | 335
+multi | case_08 | 2 | manager -> notes_worker | 302 | 205 | 507
+multi | case_08 | 3 | manager -> coverage_worker | 356 | 103 | 459
+multi | case_08 | 4 | manager -> synthesis | 296 | 171 | 467
+multi | case_09 | 1 | user -> manager_router | 240 | 152 | 392
+multi | case_09 | 2 | manager -> notes_worker | 309 | 600 | 909
+multi | case_09 | 3 | manager -> coverage_worker | 700 | 121 | 821
+multi | case_09 | 4 | coverage_worker -> rag_tool | 389 | 371 | 760
+multi | case_09 | 5 | manager -> coverage_worker | 994 | 594 | 1588
+multi | case_09 | 6 | manager -> synthesis | 1010 | 1468 | 2478
+multi | case_10 | 1 | user -> manager_router | 236 | 139 | 375
+multi | case_10 | 2 | manager -> notes_worker | 305 | 600 | 905
+multi | case_10 | 3 | manager -> coverage_worker | 823 | 146 | 969
+multi | case_10 | 4 | coverage_worker -> rag_tool | 384 | 568 | 952
+multi | case_10 | 5 | manager -> coverage_worker | 1419 | 600 | 2019
+multi | case_10 | 6 | manager -> synthesis | 1185 | 986 | 2171
+
+# multi-agent tokens by hand-off (all 10 cases)
+manager -> coverage_worker: 19454 tokens (37%)
+manager -> synthesis: 14785 tokens (28%)
+manager -> notes_worker: 8028 tokens (15%)
+coverage_worker -> rag_tool: 7022 tokens (13%)
+user -> manager_router: 3884 tokens (7%)
+
+MULTIPLIER: 2.0x = 53173 / 25979 tokens; dominant hand-off: manager -> coverage_worker, 37% of all tokens
