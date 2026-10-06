@@ -1,0 +1,12 @@
+{
+  "_comment": "MCP server config — v1: policy server only",
+  "servers": [
+    {
+      "name": "policy-server",
+      "description": "Your own policy-document search server (Server 1)",
+      "command": "python",
+      "args": ["-m", "app.mcp.policy_server"],
+      "env": {}
+    }
+  ]
+}

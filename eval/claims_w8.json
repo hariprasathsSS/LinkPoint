@@ -73,7 +73,7 @@
   },
   {
     "claim_id": "CLM-W8-010",
-    "status": "CLOSED",
+    "status": "OPEN",
     "claim_amount": 600,
     "excess": 250,
     "initial_description": "Broken window from a baseball.",
@@ -89,7 +89,7 @@
   },
   {
     "claim_id": "CLM-W8-012",
-    "status": "OPEN",
+    "status": "CLOSED",
     "claim_amount": 3000,
     "excess": 500,
     "initial_description": "Dog bite on property.",

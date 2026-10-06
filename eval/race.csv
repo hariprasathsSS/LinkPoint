@@ -1,15 +1,16 @@
 claim_id,agent_decision,agent_time,agent_tokens,agent_cost,agent_budget_term,workflow_decision,workflow_time,workflow_tokens,workflow_cost
-CLM-2024-001,APPROVED  $4500 (Claim Amount $5000 – Excess $500),3.887070894241333,4682,0.003362,,APPROVED 5000 - 500 = 4500,0.7079076766967773,366,0.000305
-CLM-2024-002,"APPROVED  
-$12,000 (Claim Amount) – $1,000 (Excess) = **$11,000** Payout.",21.515654802322388,2808,0.00167,,APPROVED 12000 - 1000 = 11000,4.807843446731567,362,0.00025699999999999996
-CLM-2024-003,APPROVED 8000 – 1000 = 7000,6.856758117675781,2217,0.0013375000000000001,,APPROVED 8000 - 1000 = 7000,5.791904449462891,756,0.00045400000000000003
-CLM-2024-004,APPROVED: $3000 - $250 = $2750,14.98771047592163,2091,0.0012515,,APPROVED 3000 - 250 = 2750,7.674556016921997,517,0.00037850000000000004
-CLM-2024-005,ERROR: Agent terminated early due to WALL_CLOCK_TIMEOUT.,58.95720934867859,4719,0.0027784999999999997,WALL_CLOCK_TIMEOUT,DENIED 15000-1500=13500,7.707509756088257,1252,0.001542
-CLM-2024-006,APPROVED: $7500 - $500 = $7000,31.714069366455078,2791,0.0016615,,APPROVED 7500 - 500 = 7000,9.680776596069336,514,0.000456
-CLM-2024-007,"DENIED. The claim is for a sinkhole collapse, which is an excluded peril under the policy (Form HO‑0304). Therefore no coverage is provided. No payout is made.",15.286522150039673,2019,0.0011965,,DENIED 3500,10.135680675506592,403,0.0003525
-CLM-2024-008,"DENIED
-
-Since surface‑water flooding is excluded by the policy, the claim cannot be paid.",14.544692516326904,2044,0.001213,,DENIED. 9000 - 1000 = 8000,10.219380855560303,630,0.000634
-CLM-2024-009,"APPROVED $5500  
-(Claim Amount $6000 – Excess $500 = $5500)",49.25084400177002,4658,0.0029500000000000004,,APPROVED 6000 - 500 = 5500,13.821924924850464,560,0.000352
-CLM-2024-010,APPROVED 2000 - 250 = 1750,17.91320824623108,2035,0.0012025,,APPROVED 2000 - 250 = 1750,9.926996231079102,396,0.00028300000000000005
+CLM-2024-001,"I’m sorry, but I couldn’t locate any record for claim **CLM-2024-001** in our system. Could you double‑check the claim ID and provide the correct one?",2.206176996231079,2493,0.0017475,,"DENIED (Claim not found, payout cannot be calculated)",9.676009178161621,531,0.0006154999999999999
+CLM-2024-002,"DENIED  
+(The claim ID CLM-2024-002 could not be found in the system, so no claim amount or excess is available to calculate a payout.)",1.2328879833221436,964,0.0007289999999999999,,DENIED 0 - 0 = 0,0.9256987571716309,772,0.000977
+CLM-2024-003,"I’m sorry, but I couldn’t retrieve any information for claim **CLM‑2024‑003**.  
+No record of that claim exists in our system, so I’m unable to approve or deny it or calculate a payout.",12.188264846801758,1445,0.0009705,,"DENIED 0-0 = 0  
+*Reason: Claim CLM-2024-003 not found; no claim amount or excess available for calculation.*",2.997920036315918,969,0.0012725000000000002
+CLM-2024-004,DENIED: Claim ID CLM-2024-004 not found in the system. No claim details available to calculate payout.,10.600055694580078,1110,0.000931,,"DENIED  
+N/A",4.2282655239105225,674,0.00083
+CLM-2024-005,DENIED: Claim CLM-2024-005 not found in the system. No payout can be calculated.,9.089137077331543,1086,0.0009090000000000001,,"DENIED (Claim not found, no payout)",3.0924572944641113,558,0.000656
+CLM-2024-006,DENIED (Claim not found),7.09212851524353,926,0.000671,,DENIED 0 - 0 = 0,3.3040757179260254,896,0.001163
+CLM-2024-007,"I was unable to retrieve any data for claim **CLM-2024-007**.  
+Without claim details, a triage decision cannot be made. If you can provide a valid claim ID or additional context, I can revisit this request.",11.231066226959229,970,0.000725,,DENIED 0 - 0 = 0,4.288113117218018,671,0.0008255
+CLM-2024-008,DENIED (Claim not found in system),11.897117853164673,1458,0.000993,,DENIED 0 - 0 = 0,1.2875628471374512,650,0.000794
+CLM-2024-009,"I’m sorry, but I couldn’t locate claim **CLM-2024-009** in our system. Please double‑check the claim ID and provide the correct number so I can retrieve the details and proceed with triage.",10.25512981414795,869,0.0005865,,DENIED 0 - 0 = 0,4.359557151794434,896,0.001163
+CLM-2024-010,I couldn’t locate any claim with the ID **CLM-2024-010**. Could you double‑check the claim number or provide the correct one so I can pull the details and review it?,9.765883922576904,1108,0.00093,,"DENIED (Claim not found, payout cannot be calculated)",3.171006917953491,568,0.000671

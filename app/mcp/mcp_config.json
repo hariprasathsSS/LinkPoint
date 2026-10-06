@@ -1,0 +1,19 @@
+{
+  "_comment": "MCP server config — v2: policy server + claims-system server. Agent code unchanged.",
+  "servers": [
+    {
+      "name": "policy-server",
+      "description": "Your own policy-document search server (Server 1)",
+      "command": "python",
+      "args": ["-m", "app.mcp.policy_server"],
+      "env": {}
+    },
+    {
+      "name": "claims-server",
+      "description": "Claims-system server exposing claim status and adjuster notes (Server 2 — added via config only)",
+      "command": "python",
+      "args": ["-m", "app.mcp.claims_server"],
+      "env": {}
+    }
+  ]
+}
